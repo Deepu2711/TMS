@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+ .fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+/* Fixes for IE < 8 */
+@media screen\9 {
+  .fileinput-button input {
+    filter: alpha(opacity=0);
+    font-size: 100%;
+    height: 100%;
+  }
+}
+/*JQUERY UI UPLOAD CSS*/
+.fileupload-buttonbar .btn,
+.fileupload-buttonbar .toggle {
+  margin-bottom: 5px;
+}
+.progress-animated .progress-bar,
+.progress-animated .bar {
+  background: url("../images/progressbar.gif") !important;
+  filter: none;
+}
+.fileupload-process {
+  float: right;
+  display: none;
+}
+.fileupload-processing .fileupload-process,
+.files .processing .preview {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url("../images/loading.gif") center no-repeat;
+  background-size: contain;
+}
+.files audio,
+.files video {
+  max-width: 300px;
+}
+
+@media (max-width: 767px) {
+  .fileupload-buttonbar .toggle,
+  .files .toggle,
+  .files .btn span {
+    display: none;
+  }
+  .files .name {
+    width: 80px;
+    word-wrap: break-word;
+  }
+  .files audio,
+  .files video {
+    max-width: 80px;
+  }
+  .files img,
+  .files canvas {
+    max-width: 100%;
+  }
+}
+/*customised css*/
+/*UPLOAD STARTS*/
+.upload_block{
+  margin-bottom: 28px;
+  padding: 10px 0; 
+}
+.panel{
+    border-radius: 0px;
+}
+.fileupload-buttonbar{
+  margin-bottom:5px;
+}
+.upload_submit_div .btn{
+    border-radius: 0px;
+}
+.upload_block .table{
+  margin-bottom:0px;
+}
+.upload_block .table > thead > tr > th, .upload_block .table > tbody > tr > th, .upload_block .table > tfoot > tr > th, .upload_block .table > thead > tr > td, .upload_block .table > tbody > tr > td, .upload_block .table > tfoot > tr > td{
+  vertical-align: middle;
+}
+.upload_block .table > tbody{
+  border:1px solid #337ab7;
+  
+}
+.files .template-upload{
+  border-left:1px solid #337ab7;
+  border-right:1px solid #337ab7;
+}
+.upload_block tr td p{
+  float:left;
+  margin:0 10px 0 5px;
+}
+.template-upload .progress{
+  margin-bottom:0px;
+}
+table .template-download td .toggle,table .template-download td .delete{
+    
+    border-radius:0px;
+}
+table .template-upload td .start,table .template-upload td .cancel{
+ 
+    border-radius:0px;
+}
+table .template-download td .delete,table .template-upload td .cancel{
+    margin: 0 10px;
+}
+
+button.tooltip1::before {
+    content: attr(data-tip) ;  
+    font-weight:600;
+    font-size: 10px;
+    position:absolute;
+    z-index: 999;
+    white-space:nowrap;
+    bottom:9999px;
+    left: 0%;
+    background:#000;
+    color:#e0e0e0;
+    padding:0px 7px;
+    line-height: 24px;
+    height: 24px;
+    opacity: 0; 
+    transition:opacity 0.4s ease-out;
+    }
+    button.tooltip1 {
+    position: relative;
+} 
+button.tooltip1:hover::before {
+    opacity: 1;
+    bottom:-28px;
+    }

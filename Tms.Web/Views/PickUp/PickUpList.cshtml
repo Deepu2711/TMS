@@ -1,0 +1,518 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Pick Up</h3>
+                </div>
+                <div class="cell_actions">
+                    <button style="border-right: 1px solid #dcdcdc;padding-right: 10px;" type="button" class="action_btn" id="upload_doc">
+                        <i aria-hidden="true" class="fa fa-upload"></i>
+                    </button>
+                    <input type="file" id="my_file" style="display: none;" multiple />
+                    <button class="action_btn" type="button" id="right_slide_button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <div class="table-responsive box_section border_blue">
+                    <table id="data_table" class="table table-striped display">
+                        <thead>
+                            <tr>
+                                <th>Operator Code</th>
+                                <th>ESI Issue Date & Time</th>
+                                <th>Shipper ID</th>
+                                <th>Consignee ID</th>
+                                <th>Type of Shipment</th>
+                                <th>Destination</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>7647398322</td>
+                                <td>27-03-2016 11.30</td>
+                                <td>S9748433</td>
+                                <td>C8983274</td>
+                                <td>Local</td>
+                                <td>BLR</td>
+                                <td>Completed</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9832764732</td>
+                                <td>22-03-2016 04.30</td>
+                                <td>S9748433</td>
+                                <td>C8983274</td>
+                                <td>Local</td>
+                                <td>OPE</td>
+                                <td>Completed</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>276473223</td>
+                                <td>21-03-2016 02.30</td>
+                                <td>S9748433</td>
+                                <td>C8983274</td>
+                                <td>Local</td>
+                                <td>SME</td>
+                                <td>Pending</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7647321212</td>
+                                <td>29-03-2016 01.30</td>
+                                <td>S9748433</td>
+                                <td>C8983274</td>
+                                <td>Local</td>
+                                <td>GLB</td>
+                                <td>Pending</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4732983276</td>
+                                <td>25-03-2016 11.30</td>
+                                <td>S9748433</td>
+                                <td>C8983274</td>
+                                <td>Local</td>
+                                <td>HYD</td>
+                                <td>Cancel</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- **************
+           RIGHT SLIDE STARTS
+           **************** -->
+        <div id="right_slide_div" class="row" style="display:none;">
+            <div class="col-md-12 content_grey">
+                <div class="clear"></div>
+                <div class="box-typical-header">
+                    <div class="cell_title">
+                        <h3>Pick Up</h3>
+                    </div>
+                    <div class="cell_actions">
+                        <button class="action_btn red" type="button" id="right_close">
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-md-12">
+                    <div class="box_section border_blue">
+                        <h2 class="box_title">Pick Up Description</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Type of Shipment</label>
+                            <select class="form-control" id="job_type">
+                                <option value="1">-Select-</option>
+                                <option value="2">Local</option>
+                                <option value="contractor">Air Shipment</option>
+                                <option value="2">Ocean</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Status</label>
+                            <select class="form-control" id="job_type">
+                                <option value="1">-Select-</option>
+                                <option value="2">Completed</option>
+                                <option value="contractor">Pending</option>
+                                <option value="2">Cancel</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Self Delivered</label>
+                            <div class="clear"></div>
+                            <label class="radio-inline">
+                                <input type="radio" name="delivery" id="" value="option1"> Yes
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="delivery" id="" value="option2"> No
+                            </label>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Operator Code</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">HAWB No</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">HAWB Dest No</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">ESI Issue Date & Time</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">MAWB No</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">MAWB Dest</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Consol No</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Movement Type</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <div class="flt_block">
+                                <div class="col-sm-12 col-md-12 form-group">
+                                    <label class="control-label">FLT 1 #</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="col-sm-6 col-md-6 form-group">
+                                    <label class="control-label">ETD</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="col-sm-6 col-md-6 form-group">
+                                    <label class="control-label">ETA</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <div class="flt_block">
+                                <div class="col-sm-12 col-md-12 form-group">
+                                    <label class="control-label">FLT 2 #</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="col-sm-6 col-md-6 form-group">
+                                    <label class="control-label">ETD</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="col-sm-6 col-md-6 form-group">
+                                    <label class="control-label">ETA</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <div class="flt_block">
+                                <div class="col-sm-12 col-md-12 form-group">
+                                    <label class="control-label">FLT 3 #</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="col-sm-6 col-md-6 form-group">
+                                    <label class="control-label">ETD</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="col-sm-6 col-md-6 form-group">
+                                    <label class="control-label">ETA</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <div class="flt_block">
+                                <div class="col-sm-12 col-md-12 form-group">
+                                    <label class="control-label">FLT 4 #</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="col-sm-6 col-md-6 form-group">
+                                    <label class="control-label">ETD</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="col-sm-6 col-md-6 form-group">
+                                    <label class="control-label">ETA</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="clear"></div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Lithium Battery/DG Indicator</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Perishable Dry Ice</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Sensitive Cargo</label>
+                            <div class="clear"></div>
+                            <label class="radio-inline">
+                                <input type="radio" name="cargo" id="" value="option1"> Yes
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="cargo" id="" value="option2"> No
+                            </label>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Instruction to Load Planner</label>
+                            <textarea class="form-control" rows="1" id=""></textarea>
+                        </div>
+                        <div class="clear"></div>
+
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_green">
+                        <h2 class="box_title">Information</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Shipper ID</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Shipper Name</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-6 col-md-6 form-group">
+                            <label class="control-label">Shipper Address</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Consignee ID</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Consignee Name</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-6 col-md-6 form-group">
+                            <label class="control-label">Consignee Address</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_red">
+                        <h2 class="box_title">Details</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Nature of Goods</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Dimensions(Length x Width x Height)</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Settlement Agent ID</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Airlift</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Inland Charge</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Free House</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Shipping Terms</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">RL Tpt Status</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_purple">
+                        <h2 class="box_title">Instructions</h2>
+                        <div class="col-sm-6 col-md-6 form-group">
+                            <label class="control-label">UFS Handling Instruction</label>
+                            <textarea class="form-control" rows="2" id=""></textarea>
+                        </div>
+                        <div class="col-sm-6 col-md-6 form-group">
+                            <label class="control-label">Special Instruction to Warehouse</label>
+                            <textarea class="form-control" rows="2" id=""></textarea>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-6 col-md-6 form-group">
+                            <label class="control-label">Special Instruction to Permit</label>
+                            <textarea class="form-control" rows="2" id=""></textarea>
+                        </div>
+                        <div class="col-sm-6 col-md-6 form-group">
+                            <label class="control-label">Special Instruction to Export Ops</label>
+                            <textarea class="form-control" rows="2" id=""></textarea>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_orange">
+                        <h2 class="box_title">Other Details</h2>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">TTL Pcs</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">TTL Gross Wgt</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">Currency</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">Export Docs</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">Fumigation</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">Insurance</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">Packing Fee</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">DGR Sevs Fee</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">Selling Rate</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">MIN</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">N</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">Weight Range</label>
+                            <select class="form-control" id="">
+                                <option value="1">-Select-</option>
+                                <option value="2">+45 Kgs</option>
+                                <option value="3">+100 Kgs</option>
+                                <option value="4">+250 Kgs</option>
+                                <option value="5">+300 Kgs</option>
+                                <option value="6">+500 Kgs</option>
+                                <option value="7">+1000 Kgs</option>
+                            </select>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">AWB Fee</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">Doc Fee</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">Cartage</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">Transfer Fee</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">Wgt Verification</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">Screening Fee</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_skyblue">
+                        <h2 class="box_title">Additional Information</h2>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <textarea class="form-control" rows="2" id=""></textarea>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-6 pull-right">
+                            <input type="reset" href="javascript:void(0)" id="right_close" class="btn wt_btn pull-right" value="Cancel">
+                            <input type="button" href="javascript:void(0)" id="si_save" class="btn def_btn pull-right" value="Save Changes">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- **************
+           EOF RIGHT SLIDE
+           **************** -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var activeclass = $('.sidebar-menu .has-sub .sub li > a[href="/Tms/PickUp/PickUpList"]');
+
+        $(activeclass).parent().parent().parent().addClass("active");
+        $(activeclass).parent().addClass('current');
+    });
+
+    /* *****  Upload Doc ***** */
+    $("#upload_doc").click(function () {
+        $("input[id='my_file']").click();
+    });
+</script>

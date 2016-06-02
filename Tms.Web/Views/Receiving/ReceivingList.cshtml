@@ -1,0 +1,339 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Receiving</h3>
+                </div>
+                <div class="cell_actions">
+                    <button class="action_btn" type="button" id="right_slide_button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <div class="table-responsive box_section border_blue">
+                    <table id="data_table" class="table table-striped display">
+                        <thead>
+                            <tr>
+                                <th>Receiving Type</th>
+                                <th>Chargable Weight</th>
+                                <th>Job</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Type 1</td>
+                                <td>700</td>
+                                <td>Job 1</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Type 2</td>
+                                <td>480</td>
+                                <td>Job 2</td>
+                                <td>Pending</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Type 3</td>
+                                <td>3105</td>
+                                <td>Job 3</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Type 1</td>
+                                <td>2098</td>
+                                <td>Job 4</td>
+                                <td>Pending</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Type 5</td>
+                                <td>10000</td>
+                                <td>Job 5</td>
+                                <td>Pending</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- **************
+          RIGHT SLIDE STARTS
+          **************** -->
+        <div id="right_slide_div" class="row" style="display:none;">
+            <div class="col-md-12 content_grey">
+                <div class="clear"></div>
+                <div class="box-typical-header">
+                    <div class="cell_title">
+                        <h3>Receiving</h3>
+                    </div>
+                    <div class="cell_actions">
+                        <button id="upload_doc" class="action_btn" type="button" style="border-right: 1px solid #dcdcdc;padding-right: 10px;">
+                            <i class="fa fa-print" aria-hidden="true"></i>
+                        </button>
+                        <button class="action_btn red" type="button" id="right_close">
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-md-12">
+                    <div class="box_section border_blue">
+                        <h2 class="box_title">Description</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Delivery Type</label>
+                            <select class="form-control" id="">
+                                <option value="1">-Select-</option>
+                                <option value="2">Warehouse </option>
+                                <option value="3">Transport</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Ownership</label>
+                            <select class="form-control" id="job_type">
+                                <option value="1">-Select-</option>
+                                <option value="2">Internal</option>
+                                <option value="contractor">Contractor</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Status</label>
+                            <select id="" class="form-control">
+                                <option value="1">Active</option>
+                                <option value="2">Inctive</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_green">
+                        <h2 class="box_title">Job Details</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Job</label>
+                            <select class="form-control select_jobdes" id="">
+                                <option value="1">-Select-</option>
+                                <option value="2" selected>Job 1</option>
+                                <option value="3">Job 2</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-8 col-md-8 form-group show_jobdescrton">
+                            <label class="control-label">Job Description</label>
+                            <textarea class="form-control" rows="1"></textarea>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_orange">
+                        <h2 class="box_title">Damaged Details</h2>
+                        <div class="col-sm-2 col-md-2 form-group">
+                            <label class="control-label">Damaged</label>
+                            <div class="clear"></div>
+                            <label class="radio-inline">
+                                <input type="radio" value="option1" id="" name="delivery"> Yes
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" value="option2" id="" name="delivery"> No
+                            </label>
+                        </div>
+                        <div class="col-sm-8 col-md-8 form-group show_damged">
+                            <label class="control-label">Damage Description</label>
+                            <textarea class="form-control" rows="1" id=""></textarea>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="box_section border_skyblue">
+                        <h2 class="box_title">Dimensions</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Weight</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Dimensions(Length x Width x Height)</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Chargeable Weight</label>
+                            <input type="text" class="form-control" disabled>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_red">
+                        <h2 class="box_title">Location Details</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Zone</label>
+                            <select id="" class="form-control">
+                                <option value="1">-Select-</option>
+                                <option value="2">1</option>
+                                <option value="3">2</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Location Type</label>
+                            <select id="" class="form-control">
+                                <option value="1">-Select-</option>
+                                <option value="2">1</option>
+                                <option value="3">2</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Location Status</label>
+                            <select id="" class="form-control">
+                                <option value="1">-Select-</option>
+                                <option value="2">1</option>
+                                <option value="3">2</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Plot No</label>
+                            <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-6 col-md-6 form-group">
+                            <label class="control-label">Address</label>
+                            <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">City</label>
+                            <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Zip</label>
+                            <input type="text" class="form-control" id="">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_green">
+                        <h2 class="box_title">Attachments</h2>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <div class="clear"></div>
+                            <!-- Upload file starts -->
+                            <div class="Upload_block">
+                                <!-- The file upload form used as target for the file upload widget -->
+                                <div class="" id="fileupload" action="" method="POST" enctype="multipart/form-data">
+                                    <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+                                    <div class="fileupload-buttonbar">
+                                        <div class="col-lg-12 upload_submit_div">
+                                            <!-- The fileinput-button span is used to style the file input field as button -->
+                                            <span class="btn btn-success fileinput-button">
+                                                <i class="glyphicon glyphicon-plus"></i>
+                                                <span>Add files...</span>
+                                                <input type="file" tabindex="-1" name="files[]" multiple="">
+                                            </span>
+                                            <button tabindex="-1" type="submit" class="btn btn-primary start" id="start_upload">
+                                                <i class="glyphicon glyphicon-upload"></i>
+                                                <span>Start upload</span>
+                                            </button>
+                                            <button tabindex="-1" type="reset" class="btn btn-warning cancel">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                <span>Delete</span>
+                                            </button>
+                                            <!-- <input type="checkbox" tabindex="-1" class="toggle"> -->
+                                            <!-- The global file processing state -->
+                                            <span class="fileupload-process"></span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!-- The table listing the files available for upload/download -->
+                                    <table role="presentation" class="table table-striped">
+                                        <tbody class="files"></tbody>
+                                    </table>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!-- Upload file ends -->
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_skyblue">
+                        <h2 class="box_title">Additional Information</h2>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <textarea class="form-control" rows="2" id=""></textarea>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-6 pull-right">
+                            <input type="reset" href="javascript:void(0)" id="right_close" class="btn wt_btn pull-right" value="Cancel">
+                            <input type="button" href="javascript:void(0)" id="si_save" class="btn def_btn pull-right" value="Save Changes">
+                            <input class="btn def_btn pull-right" type="button" value="Print" style="margin-right: 10px;">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- **************
+          EOF RIGHT SLIDE
+          **************** -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var activeclass = $('.sidebar-menu .has-sub .sub li > a[href="/Tms/Receiving/ReceivingList"]');
+
+        $(activeclass).parent().parent().parent().addClass("active");
+        $(activeclass).parent().addClass('current');
+    });
+
+    $(document).on('change', '.select_jobdes', function () {
+        var jobid = $(this).val();
+        if (jobid != 1) {
+            $('.show_jobdescrton').show();
+        } else {
+            $('.show_jobdescrton').hide();
+        }
+    });
+
+    $(document).on('change', '.select_damged', function () {
+        var jobid = $(this).val();
+        if (jobid == "yes") {
+            $('.show_damged').show()
+        } else {
+            $('.show_damged').hide();
+        }
+    });
+</script>

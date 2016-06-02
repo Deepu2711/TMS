@@ -1,0 +1,307 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Manpower</h3>
+                </div>
+                <div class="cell_actions">
+                    <button class="action_btn" type="button" id="right_slide_button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <div class="table-responsive box_section border_blue">
+                    <table id="data_table" class="table table-striped display">
+                        <thead>
+                            <tr>
+                                <th>Resource Type</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Reporting Manager</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Drivers Onboarding </td>
+                                <td>David</td>
+                                <td>Villa</td>
+                                <td>Adam Smith</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cargo Hand Onboarding</td>
+                                <td>Adam</td>
+                                <td>Voges</td>
+                                <td>Alex Hales</td>
+                                <td>Inactive</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Warehouse staff onboarding</td>
+                                <td>Matt</td>
+                                <td>Henry</td>
+                                <td>Bristrow</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Drivers Onboarding </td>
+                                <td>Cris</td>
+                                <td>Rogers</td>
+                                <td>Joe Root</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Warehouse staff onboarding</td>
+                                <td>Milne</td>
+                                <td>Mark</td>
+                                <td>Joe Root</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- **************
+           RIGHT SLIDE STARTS
+           **************** -->
+        <div id="right_slide_div" class="row" style="display:none;">
+            <div class="col-md-12 content_grey">
+                <div class="clear"></div>
+                <div class="box-typical-header">
+                    <div class="cell_title">
+                        <h3>Manpower</h3>
+                    </div>
+                    <div class="cell_actions">
+                        <button class="action_btn red" type="button" id="right_close">
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-md-12">
+                    <div class="box_section border_blue">
+                        <h2 class="box_title">Job Description</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Resource Type</label>
+                            <select class="form-control" id="resource_type">
+                                <option value="1">-Select-</option>
+                                <option value="2">Drivers Onboarding</option>
+                                <option value="cargo">Cargo Hand Onboarding</option>
+                                <option value="4">Warehouse staff onboarding</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Job Type</label>
+                            <select class="form-control" id="job_type">
+                                <option value="1">-Select-</option>
+                                <option value="2">Self</option>
+                                <option value="contractor">Contract</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group contractor_select">
+                            <label class="control-label">Contractor</label>
+                            <select class="form-control" id="">
+                                <option value="1">-Select-</option>
+                                <option value="2">ABC Company</option>
+                                <option value="3">XYZ Company</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Status</label>
+                            <select class="form-control" id="">
+                                <option value="1">Active</option>
+                                <option value="2">Inactive</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_green">
+                        <h2 class="box_title">Personal Information</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Employee ID</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">First Name</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Last Name</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Date of Birth</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Phone No</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Emergency Contact</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Total Experience</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Date of Joining</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-6 col-md-6 form-group">
+                            <label class="control-label">Address</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">City</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Zip</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_red">
+                        <h2 class="box_title">License Details<span class="optional"> (Optional)</span></h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">License No</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Date of Issue</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Valid Till</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">License Type</label>
+                            <select class="form-control" id="">
+                                <option value="1">-Select-</option>
+                                <option value="2">LMV</option>
+                                <option value="3">HMV</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_orange">
+                        <h2 class="box_title">Associations</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Reporting Manager</label>
+                            <select class="form-control" id="">
+                                <option value="1">-Select-</option>
+                                <option value="2">Adams Smith</option>
+                                <option value="3">David Willa</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Shift</label>
+                            <select class="form-control" id="">
+                                <option value="1">-Select-</option>
+                                <option value="2">Day</option>
+                                <option value="3">Night</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_skyblue">
+                        <h2 class="box_title">Additional Information</h2>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <textarea class="form-control" rows="2" id=""></textarea>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-6 pull-right">
+                            <input type="reset" href="javascript:void(0)" id="right_close" class="btn wt_btn pull-right" value="Cancel">
+                            <input type="button" href="javascript:void(0)" id="si_save" class="btn def_btn pull-right" value="Save Changes">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- **************
+           EOF RIGHT SLIDE
+           **************** -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var activeclass = $('.sidebar-menu .has-sub .sub li > a[href^="/Tms/ManPower/ManpowerList"]');
+
+        $(activeclass).parent().parent().parent().addClass("active");
+        $(activeclass).parent().addClass('current');
+    });
+
+    /* *****  Jobtype ***** */
+    $("#job_type").change(function () {
+        $(this).find("option:selected").each(function () {
+            if ($(this).attr("value") == "contractor") {
+                $(".contractor_select").show();
+            }
+            else {
+                $(".contractor_select").hide();
+            }
+        });
+    }).change();
+    /* *****  Licence ***** */
+    $("#resource_type").change(function () {
+        $(this).find("option:selected").each(function () {
+            if ($(this).attr("value") == "cargo") {
+                $(".optional").show();
+            }
+            else {
+                $(".optional").hide();
+            }
+        });
+    }).change();
+</script>

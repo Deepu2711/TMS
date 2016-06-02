@@ -1,0 +1,5 @@
+﻿var ManageManpower = {
+
+    Init: function () {
+    }
+}

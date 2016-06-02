@@ -1,0 +1,194 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Users</h3>
+                </div>
+                <div class="cell_actions">
+                    <button class="action_btn" type="button" id="right_slide_button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <div class="table-responsive box_section border_blue">
+                    <table id="data_table" class="table table-striped display">
+                        <thead>
+                            <tr>
+                                <th>Employee Id</th>
+                                <th>UserName</th>
+                                <th>Email</th>
+                                <th>Mobile Number</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Asz1</td>
+                                <td>Veniam</td>
+                                <td>Veniam@gmail.com</td>
+                                <td>0705201609</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Asz2</td>
+                                <td>Veniam</td>
+                                <td>Veniam@gmail.com</td>
+                                <td>0705201609</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Asz3</td>
+                                <td>Veniam</td>
+                                <td>Veniam@gmail.com</td>
+                                <td>0705201609</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Asz4</td>
+                                <td>Veniam</td>
+                                <td>Veniam@gmail.com</td>
+                                <td>0705201609</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Asz5</td>
+                                <td>Veniam</td>
+                                <td>Veniam@gmail.com</td>
+                                <td>0705201609</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- **************
+           RIGHT SLIDE STARTS
+           **************** -->
+        <div id="right_slide_div" class="row" style="display:none;">
+            <div class="col-md-12 content_grey">
+                <div class="clear"></div>
+                <div class="box-typical-header">
+                    <div class="cell_title">
+                        <h3>Add Users</h3>
+                    </div>
+                    <div class="cell_actions">
+                        <button class="action_btn red" type="button" id="right_close">
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-md-3">
+                    <div class="box_section border_blue">
+                        <ul>
+                            <li>
+                                <div class="image_upload">
+                                    <div class="bg_browse">
+                                        <label class="upload_btn">
+                                            <input type="file" id="fileupload" class="" name="profile" onchange="bg_firstimage(this)">
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <img src="~/Content/assets/img/avatar-placeholder.png" id="bg_img_firstpreview" alt="Your Image here" class="img-circle img-responsive img-profile">
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li class="list-group-item text-right">
+                                <span class="pull-left">
+                                    <strong>Employee Id</strong>
+                                </span>***
+                            </li>
+                            <li class="list-group-item text-right">
+                                <span class="pull-left">
+                                    <strong>Joined</strong>
+                                </span>***
+                            </li>
+                            <li class="list-group-item text-right">
+                                <span class="pull-left">
+                                    <strong>Last seen</strong>
+                                </span>***
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="col-md-9">
+                    <div class="box_section border_blue">
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <label class="control-label">Employee ID</label>
+                            <input type="text" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <label class="control-label">Full Name</label>
+                            <input type="text" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <label class="control-label">Email</label>
+                            <input type="email" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <label class="control-label">Mobile No</label>
+                            <input type="text" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <label class="control-label">DOB</label>
+                            <input type="text" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <label class="control-label">Password</label>
+                            <input type="password" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <label class="control-label">Retype Password</label>
+                            <input type="password" id="" class="form-control" value="">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-6 pull-right">
+                            <input type="reset" href="javascript:void(0)" id="right_close" class="btn wt_btn pull-right" value="Cancel">
+                            <input type="button" href="javascript:void(0)" id="si_save" class="btn def_btn pull-right" value="Save Changes">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- **************
+           EOF RIGHT SLIDE
+           **************** -->
+        <div class="clear"></div>
+    </div>
+</div>

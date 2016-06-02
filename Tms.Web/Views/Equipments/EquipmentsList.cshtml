@@ -1,0 +1,248 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Equipments</h3>
+                </div>
+                <div class="cell_actions">
+                    <button class="action_btn" type="button" id="right_slide_button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <div class="table-responsive box_section border_blue">
+                    <table id="data_table" class="table table-striped display">
+                        <thead>
+                            <tr>
+                                <th>Serial No</th>
+                                <th>Equipment Type</th>
+                                <th>Name</th>
+                                <th>Manufacturer</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>EQ8946</td>
+                                <td>Filter</td>
+                                <td>Hydr Filter</td>
+                                <td>Purolator</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>EQ7656</td>
+                                <td>Filter</td>
+                                <td>Hydr Filter</td>
+                                <td>Purolator</td>
+                                <td>Inctive</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>EQ7065</td>
+                                <td>Transmission Fluid</td>
+                                <td>Viscosity trans fluid</td>
+                                <td>John Deere</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>EQ8577</td>
+                                <td>Coolant</td>
+                                <td>Anti/Freeze</td>
+                                <td>Zerex</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>EQ3857</td>
+                                <td>Filter</td>
+                                <td>Hydr Filter</td>
+                                <td>Purolator</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- **************
+           RIGHT SLIDE STARTS
+           **************** -->
+        <div id="right_slide_div" class="row" style="display:none;">
+            <div class="col-md-12 content_grey">
+                <div class="clear"></div>
+                <div class="box-typical-header">
+                    <div class="cell_title">
+                        <h3>Equipments</h3>
+                    </div>
+                    <div class="cell_actions">
+                        <button class="action_btn red" type="button" id="right_close">
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-md-12">
+                    <div class="box_section border_blue">
+                        <h2 class="box_title">Equipment Description</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Equipment Type</label>
+                            <select class="form-control" id="">
+                                <option value="1">-Select-</option>
+                                <option value="2">Equipment 1</option>
+                                <option value="3">Equipment 2</option>
+                                <option value="4">Equipment 3</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Ownership</label>
+                            <select class="form-control" id="job_type">
+                                <option value="1">-Select-</option>
+                                <option value="2">Self</option>
+                                <option value="contractor">Contract</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group contractor_select">
+                            <label class="control-label">Contractor</label>
+                            <select class="form-control" id="">
+                                <option value="1">-Select-</option>
+                                <option value="2">ABC Company</option>
+                                <option value="3">XYZ Company</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Status</label>
+                            <select class="form-control" id="">
+                                <option value="1">Active</option>
+                                <option value="2">Inctive</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_green">
+                        <h2 class="box_title">Information</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Serial No</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Name</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Manufacturer</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Unit Cost($)</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Date of Purchase</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-6 col-md-6 form-group">
+                            <label class="control-label">Description</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_red">
+                        <h2 class="box_title">Other Details</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Warranty Days</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Last Service Date</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Service Due Date</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_skyblue">
+                        <h2 class="box_title">Additional Information</h2>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <textarea class="form-control" rows="2" id=""></textarea>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-6 pull-right">
+                            <input type="reset" href="javascript:void(0)" id="right_close" class="btn wt_btn pull-right" value="Cancel">
+                            <input type="button" href="javascript:void(0)" id="si_save" class="btn def_btn pull-right" value="Save Changes">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- **************
+           EOF RIGHT SLIDE
+           **************** -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var activeclass = $('.sidebar-menu .has-sub .sub li > a[href^="/Tms/Equipments/EquipmentsList"]');
+        
+        $(activeclass).parent().parent().parent().addClass("active");
+        $(activeclass).parent().addClass('current');
+    });
+
+    /* *****  Jobtype ***** */
+    $("#job_type").change(function(){
+        $(this).find("option:selected").each(function(){
+            if($(this).attr("value")=="contractor"){
+                $(".contractor_select").show();
+            }
+            else{
+                $(".contractor_select").hide();
+            }
+        });
+    }).change();
+        
+</script>

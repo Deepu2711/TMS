@@ -1,0 +1,94 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Profile</h3>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-3">
+                <div class="box_section border_blue">
+                    <ul>
+                        <li>
+                            <div class="image_upload">
+                                <div class="bg_browse">
+                                    <label class="upload_btn">
+                                        <input type="file" id="fileupload" class="" name="profile" onchange="bg_firstimage(this)">
+                                    </label>
+                                </div>
+                                <div>
+                                    <img src="~/Content/assets/img/profile1.jpg" id="bg_img_firstpreview" alt="Your Image here" class="img-circle img-responsive img-profile">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </li>
+                        <li class="list-group-item text-right">
+                            <span class="pull-left">
+                                <strong>Employee Id</strong>
+                            </span>ASZ123
+                        </li>
+                        <li class="list-group-item text-right">
+                            <span class="pull-left">
+                                <strong>Joined</strong>
+                            </span>2.13.2014
+                        </li>
+                        <li class="list-group-item text-right">
+                            <span class="pull-left">
+                                <strong>Last seen</strong>
+                            </span>Yesterday
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="col-md-9">
+                <div class="box_section border_blue">
+                    <div class="col-sm-12 col-md-12 form-group">
+                        <label class="control-label">Employee ID</label>
+                        <input type="text" id="" class="form-control" value="EMP3872">
+                    </div>
+                    <div class="col-sm-12 col-md-12 form-group">
+                        <label class="control-label">Full Name</label>
+                        <input type="text" id="" class="form-control" value="Lloyd">
+                    </div>
+                    <div class="col-sm-12 col-md-12 form-group">
+                        <label class="control-label">Email</label>
+                        <input type="email" id="" class="form-control" value="lloyd@g.com">
+                    </div>
+                    <div class="col-sm-12 col-md-12 form-group">
+                        <label class="control-label">Mobile No</label>
+                        <input type="text" id="" class="form-control" value="123456789">
+                    </div>
+                    <div class="col-sm-12 col-md-12 form-group">
+                        <label class="control-label">DOB</label>
+                        <input type="text" id="" class="form-control" value="15/05/1990">
+                    </div>
+                    <div class="col-sm-12 col-md-12 form-group">
+                        <label class="control-label">Password</label>
+                        <input type="password" id="" class="form-control" value="123456">
+                    </div>
+                    <div class="col-sm-12 col-md-12 form-group">
+                        <label class="control-label">Retype Password</label>
+                        <input type="text" id="" class="form-control" value="123456">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="form-group">
+                <div class="col-md-6 pull-right">
+                    <input type="reset" class="btn wt_btn pull-right" value="Cancel">
+                    <input type="button" class="btn def_btn pull-right" value="Save Changes">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

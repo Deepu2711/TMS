@@ -1,0 +1,194 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Alerts</h3>
+                </div>
+                <div class="cell_actions">
+                    <button class="action_btn" type="button" id="right_slide_button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <div class="table-responsive box_section border_blue">
+                    <table id="data_table" class="table table-striped display">
+                        <thead>
+                            <tr>
+                                <th>Alert</th>
+                                <th>Description</th>
+                                <th>Alert Type</th>
+                                <th>Date & Time</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alert 1</td>
+                                <td>Ut wisi enim ad minim veniam</td>
+                                <td>Time Based</td>
+                                <td>07/05/2016 09:30</td>
+                                <td>
+                                    <small class="label btn-success">Approve</small>
+                                    <small class="pull_right_slide_view label btn-primary">Edit</small>
+                                    <small class="label btn-danger">Cancel</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Alert 2</td>
+                                <td>Uvel illum dolore eu feugiat nulla</td>
+                                <td>Time Based</td>
+                                <td>04/05/2016 10:00</td>
+                                <td>
+                                    <small class="label btn-success">Approve</small>
+                                    <small class="pull_right_slide_view label btn-primary">Edit</small>
+                                    <small class="label btn-danger">Cancel</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Alert 3</td>
+                                <td>Nam liber tempor cum soluta</td>
+                                <td>Time Based</td>
+                                <td>03/05/2016 11:00</td>
+                                <td>
+                                    <small class="label btn-success">Approve</small>
+                                    <small class="pull_right_slide_view label btn-primary">Edit</small>
+                                    <small class="label btn-danger">Cancel</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Alert 4</td>
+                                <td>Mirum est notare quam littera gothica</td>
+                                <td>Event Based</td>
+                                <td> </td>
+                                <td>
+                                    <small class="label btn-success">Approve</small>
+                                    <small class="pull_right_slide_view label btn-primary">Edit</small>
+                                    <small class="label btn-danger">Cancel</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Alert 5</td>
+                                <td>Mirum est notare quam littera gothica, nunc</td>
+                                <td>Time Based</td>
+                                <td>01/05/2016 12:30</td>
+                                <td>
+                                    <small class="label btn-success">Approve</small>
+                                    <small class="pull_right_slide_view label btn-primary">Edit</small>
+                                    <small class="label btn-danger">Cancel</small>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- **************
+           RIGHT SLIDE STARTS
+           **************** -->
+        <div id="right_slide_div" class="row" style="display:none;">
+            <div class="col-md-12 content_grey">
+                <div class="clear"></div>
+                <div class="box-typical-header">
+                    <div class="cell_title">
+                        <h3>Alerts</h3>
+                    </div>
+                    <div class="cell_actions">
+                        <button class="action_btn red" type="button" id="right_close">
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-md-12">
+                    <div class="box_section border_blue">
+                        <h2 class="box_title">Alert Description</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Alert Name</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Alert Type</label>
+                            <select class="form-control" id="alert_type">
+                                <option value="1">-Select-</option>
+                                <option value="2">Event Based</option>
+                                <option value="time_based">Time Based</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group date_based_fld">
+                            <label class="control-label">Date & Time</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group date_based_fld">
+                            <label class="control-label">Remind Before</label>
+                            <select class="form-control" id="">
+                                <option value="1">-Select-</option>
+                                <option value="2">5 Min</option>
+                                <option value="3">10 Min</option>
+                                <option value="4">30 Min</option>
+                                <option value="5">1 Hour</option>
+                                <option value="6">5 Hours</option>
+                                <option value="7">10 Hours</option>
+                                <option value="8">1 Day</option>
+                                <option value="9">2 Days</option>
+                                <option value="10">1 Week</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <label class="control-label">Description</label>
+                            <textarea class="form-control" rows="2" id=""></textarea>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-6 pull-right">
+                            <input type="reset" href="javascript:void(0)" id="right_close" class="btn wt_btn pull-right" value="Cancel">
+                            <input type="button" href="javascript:void(0)" id="si_save" class="btn def_btn pull-right" value="Save Changes">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- **************
+           EOF RIGHT SLIDE
+           **************** -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var activeclass = $('.sidebar-menu .has-sub > a[href="/Tms/Alerts/AlertsList"]');
+
+        $(activeclass).parent().addClass('active');
+    });
+
+    /* *****  Jobtype ***** */
+    $("#alert_type").change(function(){
+        $(this).find("option:selected").each(function(){
+            if($(this).attr("value")=="time_based"){
+                $(".date_based_fld").show();
+            }
+            else{
+                $(".date_based_fld").hide();
+            }
+        });
+    }).change();     
+
+</script>

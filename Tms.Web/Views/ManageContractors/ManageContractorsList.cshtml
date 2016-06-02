@@ -1,0 +1,290 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Manage Contractors</h3>
+                </div>
+                <div class="cell_actions">
+                    <button class="action_btn" type="button" id="right_slide_button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <div class="table-responsive box_section border_blue">
+                    <table id="data_table" class="table table-striped display">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Adam Smith</td>
+                                <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Alex Hales</td>
+                                <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
+                                <td>Inactive</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bristrow</td>
+                                <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Joe Root</td>
+                                <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Milne</td>
+                                <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
+                                <td>Active</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- **************
+           RIGHT SLIDE STARTS
+           **************** -->
+        <div id="right_slide_div" class="row" style="display:none;">
+            <div class="col-md-12 content_grey">
+                <div class="clear"></div>
+                <div class="box-typical-header">
+                    <div class="cell_title">
+                        <h3>Manage Contractors</h3>
+                    </div>
+                    <div class="cell_actions">
+                        <button class="action_btn red" type="button" id="right_close">
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-md-12">
+                    <div class="box_section border_blue">
+                        <h2 class="box_title">Partner Details</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Name</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-6 col-md-6 form-group contractor_select">
+                            <label class="control-label">Description</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Status</label>
+                            <select class="form-control" id="">
+                                <option value="1">Active</option>
+                                <option value="2">Inactive</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_green">
+                        <h2 class="box_title">Services<a href="javascript:void(0)" class="add_row" id="add_services" title="Add Services"><i class="fa fa-plus" aria-hidden="true"></i></a></h2>
+                        <div class="border_sub">
+
+                            <div class="services_morefields">
+
+                                <div class="col-sm-3 col-md-3 form-group">
+                                    <label class="control-label">Service Type</label>
+                                    <select class="form-control" id="">
+                                        <option value="">Select</option>
+                                        <option value="1">Service 1</option>
+                                        <option value="2">Service 2</option>
+                                        <option value="3">Service 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <label class="control-label">Select a file</label>
+                                    <div class="smart-form">
+                                        <label class="field prepend-icon file">
+                                            <span class="button button_upload"> Choose File </span>
+                                            <input type="file" name="file1" id="file1" class="gui-file">
+                                            <input type="text" readonly="" placeholder="Image" id="uploader1" class="gui-input">
+                                            <label class="field-icon"><i class="fa fa-upload" aria-hidden="true"></i></label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 form-group">
+                                    <label class="control-label">Contract Information</label>
+                                    <input type="text" id="" class="form-control">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_red">
+                        <h2 class="box_title">Contact Details <a href="javascript:void(0)" class="add_row" id="add_contact_row"><i class="fa fa-plus" aria-hidden="true"></i></a></h2>
+
+
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="partner_contact_details">
+                                    <thead>
+                                        <tr>
+                                            <th>Contact No</th>
+                                            <th>Email</th>
+                                            <th>Address</th>
+                                            <th>City</th>
+                                            <th>Zip</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" id="" class="form-control"></td>
+                                            <td><input type="text" id="" class="form-control"></td>
+                                            <td><input type="text" id="" class="form-control"></td>
+                                            <td><input type="text" id="" class="form-control"></td>
+                                            <td><input type="text" id="" class="form-control"></td>
+                                            <td><i class="fa fa-trash"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_skyblue">
+                        <h2 class="box_title">Additional Information</h2>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <textarea class="form-control" rows="2" id=""></textarea>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-6 pull-right">
+                            <input type="reset" href="javascript:void(0)" id="right_close" class="btn wt_btn pull-right" value="Cancel">
+                            <input type="button" href="javascript:void(0)" id="si_save" class="btn def_btn pull-right" value="Save Changes">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- **************
+           EOF RIGHT SLIDE
+           **************** -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var activeclass = $('.sidebar-menu .has-sub .sub li > a[href="/Tms/ManageContractors/ManageContractorsList"]');
+
+        $(activeclass).parent().parent().parent().addClass("active");
+        $(activeclass).parent().addClass('current');
+    });
+
+    
+    /* *****  Add Contact Row ***** */
+    var counter = 1;
+    jQuery('a#add_contact_row').click(function(event){
+        event.preventDefault();
+        counter++;
+
+        
+        var newContactRow = jQuery('<tr><td><input type="text" id="" class="form-control"></td>'+
+                             counter + '<td><input type="text" id="" class="form-control"></td>'+
+                             counter + '<td><input type="text" id="" class="form-control"></td>'+
+                             counter + '<td><input type="text" id="" class="form-control"></td>'+
+                             counter + '<td><input type="text" id="" class="form-control"></td>'+
+                             counter + '<td><i class="fa fa-trash"></i></td></tr>');
+                                    
+        jQuery('#partner_contact_details').append(newContactRow);
+    });
+
+    $(document).on('click','#add_services',function(){
+
+        var clonediv = '<div class="services_morefields">'+
+        '<button class="smart_close" type="button" tooltip="close">×</button>'+
+        '                                       <div class="col-sm-3 col-md-3 form-group">'+
+        '                                          <label class="control-label">Service Type</label> '+
+        '                                          <select class="form-control" id="">'+
+        '                                             <option value="">Select</option>'+
+        '                                             <option value="1">Service 1</option>'+
+        '                                             <option value="2">Service 2</option>'+
+        '                                             <option value="3">Service 3</option>'+
+        '                                          </select>'+
+        '                                       </div>'+
+        '                                       <div class="col-md-6 col-sm-6">'+
+        '                                       <label class="control-label">Select a file</label>'+
+        '                                          <div class="smart-form">'+
+        '                                            <label class="field prepend-icon file">'+
+        '                                            <span class="button button_upload"> Choose File </span>'+
+        '                                            <input type="file" name="file1" id="file1" class="gui-file">'+
+        '                                            <input type="text" readonly="" placeholder="Image" id="uploader1" class="gui-input">'+
+        '                                             <label class="field-icon"><i class="fa fa-upload" aria-hidden="true"></i></label>'+
+        '                                             </label>'+
+        '                                             </div>'+
+        '                                       </div>'+
+        '                                       <div class="col-sm-12 col-md-12 form-group">'+
+        '                                          <label class="control-label">Contract Information</label>  '+
+        '                                          <input type="text" id="" class="form-control">'+
+        '                                          </div>'+
+        '                                          </div>'
+
+           
+        $('.border_sub').append(clonediv);
+
+    });
+
+
+    $(document).on('click', '.button_upload', function(){
+        var file = $(this).parent().find('.gui-file');
+        file.trigger('click');
+    });
+    $(document).on('change', '.gui-file', function(){
+        $(this).parent().find('.gui-input').val($(this).val().replace(/C:\\fakepath\\/i, ''));
+    });
+</script>

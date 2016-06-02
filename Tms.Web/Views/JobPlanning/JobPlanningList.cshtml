@@ -1,0 +1,254 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Job Planning</h3>
+                </div>
+                <div class="cell_actions">
+                    <button class="action_btn" type="button" id="right_slide_button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <div class="table-responsive box_section border_blue">
+                    <table id="data_table" class="table table-striped display">
+                        <thead>
+                            <tr>
+                                <th>Job Name</th>
+                                <th>Route</th>
+                                <th>No.of Vehicles</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Job123</td>
+                                <td>Route 1</td>
+                                <td>7</td>
+                                <td>23-03-2016</td>
+                                <td>Completed</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Job12</td>
+                                <td>Route 2</td>
+                                <td>4</td>
+                                <td>23-03-2016</td>
+                                <td>Completed</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Job3</td>
+                                <td>Route 3</td>
+                                <td>5</td>
+                                <td>23-03-2016</td>
+                                <td>Completed</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Job1234</td>
+                                <td>Route 4</td>
+                                <td>2</td>
+                                <td>23-03-2016</td>
+                                <td>Pending</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Job53</td>
+                                <td>Route 5</td>
+                                <td>1</td>
+                                <td>23-03-2016</td>
+                                <td>Pending</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- **************
+          RIGHT SLIDE STARTS
+          **************** -->
+        <div id="right_slide_div" class="row" style="display:none;">
+            <div class="col-md-12 content_grey">
+                <div class="clear"></div>
+                <div class="box-typical-header">
+                    <div class="cell_title">
+                        <h3>Job Planning Details</h3>
+                    </div>
+                    <div class="cell_actions">
+                        <button class="action_btn red" type="button" id="right_close">
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-md-12">
+                    <div class="box_section border_blue">
+                        <h2 class="box_title">Job Planning</h2>
+                        <form role="form" class="" id="job_plan">
+                            <div class="col-sm-3 col-md-3 form-group">
+                                <label class="control-label">Route</label>
+                                <select class="form-control select_route">
+                                    <option value="-1">Select</option>
+                                    <option value="0">Route 1</option>
+                                    <option value="1">Route 2</option>
+                                    <option value="2">Route 3</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3 col-md-3 form-group">
+                                <label class="control-label">Job Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-3 col-md-3 form-group">
+                                <label class="control-label">Date</label>
+                                <input type="text" class="form-control date_picker">
+                            </div>
+                            <div class="clear"></div>
+                            <div class="job_dynamic data" style="display:none;">
+                                <div class="col-md-2 sort_main">
+                                    <div class="proj_detail_head">
+                                        <h2 class="box-title">JOBS</h2>
+                                    </div>
+                                    <div class="sort_body">
+                                        <ul id="sortable_1" class="con connectedSortable">
+                                            <li class="ui-state-default">Item 1</li>
+                                            <li class="ui-state-default">Item 2</li>
+                                            <li class="ui-state-default">Item 3</li>
+                                            <li class="ui-state-default">Item 4</li>
+                                            <li class="ui-state-default">Item 5</li>
+                                        </ul>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="col-md-9 attach_data">
+                                    <input type="button" value="Add Vehicle" class="btn btn-primary def_btn pull-right" id="add_vehicle">
+                                    <div class="clear"></div>
+                                    <!-- <div class="col-md-3 sort_main">
+                                    <div class="proj_detail_head">
+                                    <h2 class="box-title">Vehicle 1</h2>
+                                    </div>
+                                    <div class="sort_body" id="sort_body_1">
+                                    <ul id="sortable2" class="con connectedSortable">
+                                    <li class="ui-state-default">Item 1</li>
+                                    <li class="ui-state-default">Item 2</li>
+                                    <li class="ui-state-default">Item 3</li>
+                                    <li class="ui-state-default">Item 4</li>
+                                    <li class="ui-state-default">Item 5</li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    </div> -->
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </form>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-6 pull-right">
+                            <input type="reset" href="javascript:void(0)" id="right_close" class="btn wt_btn pull-right" value="Cancel">
+                            <input type="button" href="javascript:void(0)" id="si_save" class="btn def_btn pull-right" value="Save Changes">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- **************
+          EOF RIGHT SLIDE
+          **************** -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var activeclass = $('.sidebar-menu .has-sub .sub li > a[href="/Tms/JobPlanning/JobPlanningList"]');
+
+        $(activeclass).parent().parent().parent().addClass("active");
+        $(activeclass).parent().addClass('current');
+    });
+
+    $(function () {
+
+        $(".connectedSortable").sortable({
+            connectWith: ".connectedSortable",
+            cursor: "move"
+        }).disableSelection();
+    });
+
+    $("#job_plan").on("click", "#add_vehicle", function () {
+
+
+
+        var sortcount = $(this).parent().parent().find('.sort_main').length;
+
+
+        var myvar = "<div class='col-md-4 sort_main'><div class='proj_detail_head'><h2 class='box-title'>Vehicle " + sortcount + "<i class='fa fa-close pull-right close_sort_div' aria-hidden='true'></i> </h2></div><div class='sort_body' id='sort_body_" + sortcount + "'><ul id='sortable_" + sortcount + "' class='connectedSortable'></ul><div class='clear'></div></div><div class='clear'></div></div>"
+
+        $(".attach_data").append(myvar);
+
+        $(".connectedSortable").sortable({
+            connectWith: ".connectedSortable",
+            cursor: "move"
+        }).disableSelection();
+
+    });
+
+    $("#job_plan").on('change', '.select_route', function () {
+
+        var routedata = $(this).val();
+        if (routedata != "-1") {
+            $(".add_veh_div,.job_dynamic").show();
+        } else {
+            $(".add_veh_div,.job_dynamic").hide();
+        }
+    });
+
+    $(document).on('click', '.close_sort_div', function () {
+        var listcount = $(this).parent().parent().parent().find('.connectedSortable li').length
+
+        if (listcount == "0") {
+            var dlt = $(this).parent().parent().parent().remove();
+        } else {
+            alert('Move the jobs to other Vehicle or to Jobs List')
+        }
+
+    })
+</script>

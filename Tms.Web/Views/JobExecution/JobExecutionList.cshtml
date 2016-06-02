@@ -1,0 +1,173 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Job Execution</h3>
+                </div>
+                <div class="cell_actions">
+                    <button class="action_btn" type="button" id="right_slide_button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <div class="table-responsive box_section border_blue">
+                    <table id="data_table" class="table table-striped display">
+                        <thead>
+                            <tr>
+                                <th>Job Name</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hendrerit</td>
+                                <td>Pending</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit" title="Edit"></i>
+                                    <i class="fa fa-trash" title="Delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Videntur</td>
+                                <td>Completed</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit" title="Edit"></i>
+                                    <i class="fa fa-trash" title="Delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mirum</td>
+                                <td>Returned</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Claritatem</td>
+                                <td>Pending</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit" title="Edit"></i>
+                                    <i class="fa fa-trash" title="Delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dynamicus</td>
+                                <td>Pending</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit" title="Edit"></i>
+                                    <i class="fa fa-trash" title="Delete"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- **************
+           RIGHT SLIDE STARTS
+           **************** -->
+        <div id="right_slide_div" class="row" style="display:none;">
+            <div class="col-md-12 content_grey">
+                <div class="clear"></div>
+                <div class="box-typical-header">
+                    <div class="cell_title">
+                        <h3>Job Execution</h3>
+                    </div>
+                    <div class="cell_actions">
+                        <button class="action_btn red" type="button" id="right_close">
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-md-12">
+                    <div class="box_section border_blue">
+                        <h2 class="box_title">Description</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Job Name</label>
+                            <select class="form-control" id="">
+                                <option value="1">-Select-</option>
+                                <option value="2">Job 132</option>
+                                <option value="3">Job 324</option>
+                                <option value="4">Job 382</option>
+                                <option value="5">Job 736</option>
+                            </select>
+
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Status</label>
+                            <select class="form-control" id="">
+                                <option value="1">Completed</option>
+                                <option value="2">Pending</option>
+                                <option value="3">Rejected</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_green">
+                        <h2 class="box_title">Details</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Weight</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Dimensions(Length x Width x Height)</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-6 col-md-6 form-group">
+                            <label class="control-label">Description</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="box_section border_skyblue">
+                        <h2 class="box_title">Additional Information</h2>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <textarea class="form-control" rows="2" id=""></textarea>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-6 pull-right">
+                            <input type="reset" href="javascript:void(0)" id="right_close" class="btn wt_btn pull-right" value="Cancel">
+                            <input type="button" href="javascript:void(0)" id="si_save" class="btn def_btn pull-right" value="Save Changes">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- **************
+           EOF RIGHT SLIDE
+           **************** -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var activeclass = $('.sidebar-menu .has-sub .sub li > a[href="/Tms/JobExecution/JobExecutionList"]');
+
+        $(activeclass).parent().parent().parent().addClass("active");
+        $(activeclass).parent().addClass('current');
+    });
+</script>

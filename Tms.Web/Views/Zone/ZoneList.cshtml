@@ -1,0 +1,188 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Zones</h3>
+                </div>
+                <div class="cell_actions">
+                    <button class="action_btn" type="button" id="right_slide_button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <div class="table-responsive box_section border_blue">
+                    <table id="data_table" class="table table-striped display">
+                        <thead>
+                            <tr>
+                                <th>Zone</th>
+                                <th>Location Name</th>
+                                <th>Location Type</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Zone 1</td>
+                                <td>Loc 1</td>
+                                <td>Type 1</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Zone 1</td>
+                                <td>Loc 2</td>
+                                <td>Type 1</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Zone 1</td>
+                                <td>Loc 3</td>
+                                <td>Type 2</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Zone 2</td>
+                                <td>Loc 7</td>
+                                <td>Type 3</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Zone 2</td>
+                                <td>Loc 9</td>
+                                <td>Type 1</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- **************
+           RIGHT SLIDE STARTS
+           **************** -->
+        <div id="right_slide_div" class="row" style="display:none;">
+            <div class="col-md-12 content_grey">
+                <div class="clear"></div>
+                <div class="box-typical-header">
+                    <div class="cell_title">
+                        <h3>Zones</h3>
+                    </div>
+                    <div class="cell_actions">
+                        <button class="action_btn red" type="button" id="right_close">
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-md-4">
+                    <div class="box_section border_blue">
+                        <h2 class="box_title">Description</h2>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <label class="control-label">Zone Name</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="col-md-8">
+                    <div class="box_section border_green">
+                        <h2 class="box_title">Location Details <a class="add_row" href="javascript:void(0)" id="add_zip_field"><i aria-hidden="true" class="fa fa-plus"></i></a></h2>
+                        <div class="col-sm-12 col-md-12">
+                            <div class="table-responsive table_big">
+                                <table id="zip_code_block" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Location Name</th>
+                                            <th>Location Type</th>
+                                            <th width="70">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" id="" class="form-control"></td>
+                                            <td>
+                                                <select class="form-control" id="">
+                                                    <option value="1">-Select-</option>
+                                                    <option value="2">Type 1</option>
+                                                    <option value="3">Type 2</option>
+                                                    <option value="4">Type 3</option>
+                                                </select>
+                                            </td>
+                                            <td><i class="fa fa-trash"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-6 pull-right">
+                            <input type="reset" href="javascript:void(0)" id="right_close" class="btn wt_btn pull-right" value="Cancel">
+                            <input type="button" href="javascript:void(0)" id="si_save" class="btn def_btn pull-right" value="Save Changes">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- **************
+           EOF RIGHT SLIDE
+           **************** -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var activeclass = $('.sidebar-menu .has-sub .sub li > a[href^="/Tms/Zone/ZoneList"]');
+
+        $(activeclass).parent().parent().parent().addClass("active");
+        $(activeclass).parent().addClass('current');
+    });
+
+    /* *****  Add Zip Row ***** */
+    var counter = 1;
+    jQuery('a#add_zip_field').click(function (event) {
+        event.preventDefault();
+        counter++;
+
+
+        var newContactRow = jQuery('<tr><td><input type="text" id="" class="form-control"></td>' +
+                             counter + '<td><select class="form-control" id=""><option value="1">-Select-</option><option value="2">Type 1</option><option value="3">Type 2</option><option value="4">Type 3</option></select></td>' +
+                             counter + '<td><i class="fa fa-trash"></i></td></tr>');
+
+        jQuery('#zip_code_block').append(newContactRow);
+    });
+</script>

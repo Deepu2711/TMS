@@ -1,0 +1,126 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Vehicle Status</h3>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12 content_grey">
+                <div class="clear"></div>
+                <div class="clear"></div>
+                <div class="col-md-12">
+                    <div class="box_section border_blue">
+                        <h2 class="box_title">Route Details</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Select Zip</label>
+                            <select class="form-control" id="">
+                                <option value="1">-Select-</option>
+                                <option value="2">Zip 1</option>
+                                <option value="3">Zip 2</option>
+                                <option value="4">Zip 3</option>
+                                <option value="5">Zip 4</option>
+                                <option value="6">Zip 5</option>
+                                <option value="7">Zip 6</option>
+                                <option value="8">Zip 7</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Select Range</label>
+                            <select class="form-control" id="">
+                                <option value="2">1 KM</option>
+                                <option value="3">2 KM</option>
+                                <option value="4">3 KM</option>
+                                <option value="5">5 KM</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="button" href="javascript:void(0)" id="map_btn" class="btn def_btn" value="Submit" style="margin-top: 20px;">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="col-md-4 map_block" style="display: none">
+                    <div class="box_section border_red">
+                        <h2 class="box_title">Vehicle Details</h2>
+                        <div class="col-sm-12 col-md-12">
+                            <div class="table-responsive table_big">
+                                <table id="" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Vehicle Type</th>
+                                            <th>Vehicle No</th>
+                                            <th>Empty Capacity(Ton)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Medium Truck</td>
+                                            <td>AA93873</td>
+                                            <td>9</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Heavy Truck</td>
+                                            <td>JU933</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Medium Truck</td>
+                                            <td>OP0393</td>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="col-md-8 map_block" style="display: none">
+                    <div class="box_section border_green">
+                        <h2 class="box_title">Track Vehicles</h2>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <img class="" alt="Map" src="~/Content/assets/img/map.png">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="row map_block" style="display: none">
+                    <div class="form-group">
+                        <div class="col-md-6 pull-right">
+                            <input type="button" href="javascript:void(0)" id="" class="btn def_btn pull-right" value="Refresh">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var activeclass = $('.sidebar-menu .has-sub > a[href="/Tms/VehicleStatus/VehicleStatusList"]');
+      
+        $(activeclass).parent().addClass('active');
+    });
+
+    $("#map_btn").click(function () {
+        $(".map_block").show();
+    });
+</script>

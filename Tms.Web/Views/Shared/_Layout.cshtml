@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS</title>
+    <link href="~/Content/assets/img/favicon.ico" rel="shortcut icon">
+    <link href="~/Content/assets/img/touch.png" alt="Logo" rel="apple-touch-icon-precomposed">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- STYLE SHEETS -->
+    <link rel='stylesheet' type='text/css' href='~/Content/assets/bootstrap-3.3.5/css/bootstrap.css'/>
+    <link rel='stylesheet' type='text/css' href="~/Content/assets/css/jquery.dataTables.css"/>
+    <link rel="stylesheet" type='text/css' href='~/Content/assets/font-awesome/css/font-awesome.min.css'/>
+    <link rel='stylesheet' type='text/css' href='~/Content/assets/css/main.css'/>
+    <link rel='stylesheet' type='text/css' href='~/Content/assets/css/style.css'/>
+    <link rel='stylesheet' type='text/css' href='~/Content/assets/css/datepicker.css'/>
+    <link rel="stylesheet" type='text/css' href="~/Content/assets/css/upload_file.css"/>
+    <link rel="stylesheet" type='text/css' href="~/Content/assets/css/ui.css"/>
+    <link rel="stylesheet" type='text/css' href="~/Content/assets/css/select2.min.css"/>
+    <link rel="stylesheet" type='text/css' href="~/Content/assets/css/fullcalendar.css"/>
+    
+    <!-- ***** JS ***** -->
+    <!-- JQUERY -->
+    <script type="text/javascript" src='~/Content/assets/js/jquery-1.11.3.min.js'></script>
+    <!-- BOOTSTRAP -->
+    <script type="text/javascript" src='~/Content/assets/bootstrap-3.3.5/js/bootstrap.js'></script>
+    <!-- JQUERY UI-->
+    <script type="text/javascript" src="~/Content/assets/js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <!-- COOKIE -->
+    <script type="text/javascript" src="~/Content/assets/js/jQuery-Cookie/jquery.cookie.min.js"></script>
+    <!-- DATA TABLE -->
+    <script type="text/javascript" src="~/Content/assets/js/jquery.dataTables.min.js"></script>
+    <!-- PROGRESS BAR -->
+    <script type="text/javascript" src='~/Content/assets/js/progressbar.js'></script>
+    <script type="text/javascript" src='~/Content/assets/js/sweetalert.min.js'></script>
+    <script type="text/javascript" src='~/Content/assets/js/bootstrap-datepicker.js'></script>
+    <!-- CUSTOM -->
+    <script type="text/javascript" src='~/Content/assets/js/script.js'></script>
+    <script type="text/javascript" src='~/Content/assets/js/app.js'></script>
+    <script type="text/javascript" src="~/Content/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/fullcalendar.min.js"></script>
+
+    <!--Start of Custom Styles  -->
+    <script type="text/javascript" src="~/Scripts/Main.js"></script>
+
+    <!--End of Custom Styles  -->
+
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- SIDEBAR COLLAPSE -->
+        <div class="navbar-brand">
+            <div id="sidebar-collapse" class="sidebar-collapse btn">
+                <i class="fa fa-bars"
+                   data-icon1="fa fa-bars"
+                   data-icon2="fa fa-bars"></i>
+            </div>
+        </div>
+        <!-- /SIDEBAR COLLAPSE -->
+        <div class="logo">
+            <a href="@Url.Action("AuthenticateUser", "Home")">
+                <img src="~/Content/assets/img/logo.png" alt="Logo" class="logo-img">
+            </a>
+            <span>Transport Management System</span>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="~/Content/assets/img/avatar1.jpg" class="user-pic img-circle" alt="">Hi, Lloyd <b class="caret"></b>
+                </a>
+                <ul class="dropdown-user dropdown-menu" role="menu">
+                    <li>
+                        <a href="@Url.Action("ProfilePage", "Profile")">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;My Profile
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="@Url.Action("Index", "Home")">
+                            <span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;Logout
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="header_noti_menu">
+            <ul class="nav navbar-nav">
+                <!-- Messages -->
+                <li class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="label label-success">3</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">Messages</li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <h4>
+                                            Support Team
+                                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                        </h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h4>
+                                            Support Team
+                                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                        </h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h4>
+                                            Support Team
+                                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                        </h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="#">See All Messages</a></li>
+                    </ul>
+                </li>
+                <!-- Notifications -->
+                <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                        <span class="label label-warning">5</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">Notifications</li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="#"> 5 new members joined today </a>
+                                </li>
+                                <li>
+                                    <a href="#">5 new members joined</a>
+                                </li>
+                                <li>
+                                    <a href="#">25 sales made</a>
+                                </li>
+                                <li>
+                                    <a href="#">You changed your Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="#">View all</a></li>
+                    </ul>
+                </li>
+                <!-- Alerts -->
+                <li class="dropdown tasks-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-flag-o"></i>
+                        <span class="label label-danger">5</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">Alerts</li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="#"> 5 new members joined today </a>
+                                </li>
+                                <li>
+                                    <a href="#">5 new members joined</a>
+                                </li>
+                                <li>
+                                    <a href="#">25 sales made</a>
+                                </li>
+                                <li>
+                                    <a href="#">You changed your Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer">
+                            <a href="#">View all tasks</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </header>
+    <div class="clear"></div>
+    <!-- HEADER 2 -->
+    <div class="top_bar">
+        <div class="col-sm-4 project_name">
+            <h2>
+                <i class="glyphicon glyphicon-inbox"></i>
+                <span>Vehicles</span>
+            </h2>
+        </div>
+        <div class="col-md-8 top_menu">
+            <ul>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 1</a>
+                    <ul role="menu" class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#">Menu 11</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Menu 111</a>
+                                </li>
+                                <li>
+                                    <a href="#">Menu 112</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 2</a>
+                    <ul role="menu" class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#">Menu 21</a>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#">Menu 22</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Menu 221</a>
+                                </li>
+                                <li>
+                                    <a href="#">Menu 222</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#">Menu 23</a>
+                        </li>
+                        <li class="dropdown-submenu">
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Menu 4</a>
+                </li>
+                <li>
+                    <a href="#">Menu 5</a>
+                </li>
+            </ul>
+            <div class="admin_menu_bar">
+                <ul class="nav navbar-nav">
+
+                    <li class="">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
+                            <span class="glyphicon glyphicon-cog"></span>Admin<b class="caret"></b>
+                        </a>
+                        <ul role="menu" class="dropdown-admin dropdown-menu">
+                            <li>
+                                <a href="@Url.Action("AddUsersList", "AddUsers")">Manage Users</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("ManageRolesPage", "ManageRoles")">Manage Roles</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("PermissionsList", "Permissions")">Manage Permissions</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!-- EOF HEADER 2 -->
+    <div class="clear"></div>
+    <!-- PAGE -->
+    <section id="page">
+        <!-- CONTENT -->
+        <div class="main_div">
+            <!-- ******************
+               SIDEBAR ******* -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-menu nav-collapse">
+                    <ul>
+                        <li class="has-sub">
+                            <a href="@Url.Action("AuthenticateUser", "Home")">
+                                <i class="fa fa-tachometer fa-fw"></i>
+                                <span class="menu-text">
+                                    Dashboard
+                                </span>
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="" href="javascript:;">
+                                <i class="fa fa-cubes fa-fw"></i>
+                                <span class="menu-text">
+                                    Resource Management
+                                    <span class="arrow"></span>
+                                </span>
+                            </a>
+                            <ul class="sub">
+                                <li>
+                                    <a href="@Url.Action("ManpowerList", "ManPower")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Manpower</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("VehicleList", "Vehicle")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Vehicles</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("EquipmentsList", "Equipments")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Equipments</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("WarehouseList", "Warehouse")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Warehouse</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("VehicleLoggerList", "VehicleLogger")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Vehicle Logger</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("ResourceAvailablityList", "ResourceAvailablity")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Resource Availability</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("ZoneList", "Zone")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Zones</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="" href="javascript:;">
+                                <i class="fa fa-industry fa-fw"></i>
+                                <span class="menu-text">
+                                    Jobs
+                                    <span class="arrow"></span>
+                                </span>
+                            </a>
+                            <ul class="sub">
+                                <li>
+                                    <a href="@Url.Action("JobPlanningList", "JobPlanning")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Job Planning</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("JobExecutionList", "JobExecution")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Job Execution</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("PickUpList", "PickUp")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Pick up</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("DeliveryList", "Delivery")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Delivery</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="" href="javascript:;">
+                                <i class="fa fa-user fa-fw"></i>
+                                <span class="menu-text">
+                                    Contacts
+                                    <span class="arrow"></span>
+                                </span>
+                            </a>
+                            <ul class="sub">
+                                <li>
+                                    <a href="@Url.Action("ManageCustomersList", "ManageCustomers")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Manage Customers</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("ManageContractorsList", "ManageContractors")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Manage Contractors</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="" href="javascript:;">
+                                <i class="fa fa-truck fa-fw"></i>
+                                <span class="menu-text">
+                                    Warehouse Operations
+                                    <span class="arrow"></span>
+                                </span>
+                            </a>
+                            <ul class="sub">
+
+                                <li>
+                                    <a href="@Url.Action("ReceivingList", "Receiving")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Receiving</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("ReleasingList", "Releasing")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Releasing</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("InventoryList", "Inventory")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Inventory</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="" href="javascript:;">
+                                <i class="fa fa-calendar-check-o fa-fw"></i>
+                                <span class="menu-text">
+                                    Scheduling
+                                    <span class="arrow"></span>
+                                </span>
+                            </a>
+                            <ul class="sub">
+                                <li>
+                                    <a href="@Url.Action("MasterScheduleList", "MasterSchedule")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Master Schedule</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("RoutePlanningList", "RoutePlanning")">
+                                        <i class="fa fa-circle-o"></i>
+                                        <span class="sub-menu-text">Route Planning</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a href="@Url.Action("VehicleStatusList", "VehicleStatus")">
+                                <i class="fa fa-map-marker fa-fw"></i>
+                                <span class="menu-text">
+                                    Vehicle Status
+                                </span>
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="@Url.Action("AlertsList", "Alerts")">
+                                <i class="fa fa-bell fa-fw"></i>
+                                <span class="menu-text">
+                                    Alerts
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /SIDEBAR MENU -->
+                </div>
+            </div>
+            <!-- ******************
+               EOF SIDEBAR ******* -->
+            <!-- ******************
+               CONTENT DIV ******* -->
+            <div id="page_content">
+                @RenderBody()
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- ******************
+           EOF CONTENT DIV ******* -->
+        <!-- EOF CONTENT -->
+        <div class="clear"></div>
+    </section>
+    <!-- ***** EOF SECTION ***** -->
+    <!-- ***** FOOTER ***** -->
+    <footer>
+        <div class="footer_container">
+            <span>Copyright &copy; 2016 All Rights Reserved</span>
+            <div class="clear"></div>
+        </div>
+    </footer>
+    <!-- ***** EOF FOOTER ***** -->
+    <div class="clear"></div>
+   
+
+   
+    <script>
+        /* *****  Menu ***** */
+        jQuery(document).ready(function () {
+            App.setPage("widgets_box");  //Set current page
+            App.init(); //Initialise plugins and elements
+            is_mini = $('#sidebar').hasClass('mini-menu');
+            if (is_mini) {
+                $('#sidebar').removeClass('mini-menu');
+                $('#main-content').removeClass('margin-left-50');
+            }
+        });
+
+    </script>
+</body>
+</html>

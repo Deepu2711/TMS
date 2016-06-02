@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.Business", "Tms.Business\Tms.Business.csproj", "{47D0B69C-2051-4236-886F-7B02666BE9B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.DataAccess", "Tms.DataAccess\Tms.DataAccess.csproj", "{1026269B-B5F2-413D-8B14-B3175666917F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.Model", "Tms.Model\Tms.Model.csproj", "{9515C84D-84BD-475C-A8AA-769B72FF69CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.Web", "Tms.Web\Tms.Web.csproj", "{32A91F31-0489-40EB-AA12-FBB2400BE725}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.Common.Logging", "Tms.Common.Logging\Tms.Common.Logging.csproj", "{7AD6B789-0F56-4095-8313-3597F0B215AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47D0B69C-2051-4236-886F-7B02666BE9B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D0B69C-2051-4236-886F-7B02666BE9B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D0B69C-2051-4236-886F-7B02666BE9B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D0B69C-2051-4236-886F-7B02666BE9B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1026269B-B5F2-413D-8B14-B3175666917F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1026269B-B5F2-413D-8B14-B3175666917F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1026269B-B5F2-413D-8B14-B3175666917F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1026269B-B5F2-413D-8B14-B3175666917F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9515C84D-84BD-475C-A8AA-769B72FF69CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9515C84D-84BD-475C-A8AA-769B72FF69CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9515C84D-84BD-475C-A8AA-769B72FF69CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9515C84D-84BD-475C-A8AA-769B72FF69CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A91F31-0489-40EB-AA12-FBB2400BE725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A91F31-0489-40EB-AA12-FBB2400BE725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A91F31-0489-40EB-AA12-FBB2400BE725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A91F31-0489-40EB-AA12-FBB2400BE725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD6B789-0F56-4095-8313-3597F0B215AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD6B789-0F56-4095-8313-3597F0B215AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD6B789-0F56-4095-8313-3597F0B215AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD6B789-0F56-4095-8313-3597F0B215AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal

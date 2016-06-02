@@ -1,0 +1,282 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Master Schedule</h3>
+                </div>
+                <div class="cell_actions">
+                    <button class="action_btn" type="button" id="right_slide_button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <div class="table-responsive box_section border_blue">
+                    <table id="data_table" class="table table-striped display">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Route Name</th>
+                                <th>Weekday/Date</th>
+                                <th>Time</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Recurring</td>
+                                <td>Duncan Ln</td>
+                                <td>Monday</td>
+                                <td>09:30 to 15:30</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Recurring</td>
+                                <td>Hill Road</td>
+                                <td>Monday</td>
+                                <td>10:00 to 18:30</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>One Time</td>
+                                <td>Old Sawmill Rd</td>
+                                <td>28/05/2015</td>
+                                <td>11:00  to 15:30</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>One Time</td>
+                                <td>Queens Road</td>
+                                <td>29/05/2015</td>
+                                <td>12:30 to 20:00</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Recurring</td>
+                                <td>Holiday Rd</td>
+                                <td>Thursday</td>
+                                <td>15:00  to 20:00</td>
+                                <td>
+                                    <i class="pull_right_slide_view fa fa-edit"></i>
+                                    <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- **************
+           RIGHT SLIDE STARTS
+           **************** -->
+        <div id="right_slide_div" class="row" style="display:none;">
+            <div class="col-md-12 content_grey">
+                <div class="clear"></div>
+                <div class="box-typical-header">
+                    <div class="cell_title">
+                        <h3>Master Schedule</h3>
+                    </div>
+                    <div class="cell_actions">
+                        <button class="action_btn red" type="button" id="right_close">
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-md-12">
+                    <div class="box_section border_blue">
+                        <h2 class="box_title">Schedule Description</h2>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Type</label>
+                            <select class="form-control" id="schedule_type">
+                                <option value="1">-Select-</option>
+                                <option value="recurring">Recurring</option>
+                                <option value="onetime">One Time</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group" id="schedule_weekday" style="display:none;">
+                            <label class="control-label">Week Day</label>
+                            <select class="form-control" id="week_select" multiple="multiple">
+                                <option value="2">Sunday</option>
+                                <option value="3">Monday</option>
+                                <option value="4">Tuesday</option>
+                                <option value="5">Wednesday</option>
+                                <option value="6">Thursady</option>
+                                <option value="7">Friday</option>
+                                <option value="8">Saturday</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group" id="schedule_date" style="display:none;">
+                            <label class="control-label">Date</label>
+                            <input type="text" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Time (From)</label>
+                            <select class="form-control" id="">
+                                <option value="select">-Select-</option>
+                                <option value="0">00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Time (To)</label>
+                            <select class="form-control" id="">
+                                <option value="select">-Select-</option>
+                                <option value="0">00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Vehicle Type</label>
+                            <select id="" class="form-control">
+                                <option value="1">-Select-</option>
+                                <option value="2">Light Truck</option>
+                                <option value="3">Medium Truck</option>
+                                <option value="4">Heavy Truck</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-3 form-group">
+                            <label class="control-label">Route Name</label>
+                            <select class="form-control" id="">
+                                <option value="1">-Select-</option>
+                                <option value="2">Route 1</option>
+                                <option value="3">Route 2</option>
+                                <option value="4">Route 3</option>
+                                <option value="5">Route 4</option>
+                                <option value="6">Route 5</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="col-md-12">
+                    <div class="box_section border_skyblue">
+                        <h2 class="box_title">Additional Information</h2>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <textarea class="form-control" rows="2" id=""></textarea>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-6 pull-right">
+                            <input type="reset" href="javascript:void(0)" id="right_close" class="btn wt_btn pull-right" value="Cancel">
+                            <input type="button" href="javascript:void(0)" id="si_save" class="btn def_btn pull-right" value="Save Changes">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- **************
+           EOF RIGHT SLIDE
+           **************** -->
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var activeclass = $('.sidebar-menu .has-sub .sub li > a[href="/Tms/MasterSchedule/MasterScheduleList"]');
+
+        $(activeclass).parent().parent().parent().addClass("active");
+        $(activeclass).parent().addClass('current');
+    });
+
+    /* *****  Schedule Type ***** */
+    $("#schedule_type").change(function(){
+        $(this).find("option:selected").each(function(){
+            if($(this).attr("value")=="recurring"){
+                $("#schedule_weekday").show();
+                $("#schedule_date").hide();
+            }
+            else if($(this).attr("value")=="onetime"){
+                $("#schedule_date").show();
+                $("#schedule_weekday").hide();
+            }
+        });
+    }).change();
+         
+    /* *****  Add Contact Row ***** */
+    jQuery('a#add_zip_field').click(function(event){
+        event.preventDefault();
+        var newZipField = jQuery('<div class="form-group"><input type="text" id="" class="form-control"></div>');                         
+        jQuery('#zip_code_block').append(newZipField);
+    });
+
+    /* *****  Select 2 ***** */
+    $("#week_select").select2();        
+  
+</script>

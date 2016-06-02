@@ -1,0 +1,112 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>TMS | Log in</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="~/Content/assets/bootstrap-3.3.5/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/login.css" rel="stylesheet" />
+</head>
+<body class="hold-transition login-page">
+
+    <div class="login-box">
+        <div class="login-logo">
+            <img src="~/Content/assets/img/logo_small.png" alt="Logo">
+        </div>
+        <!-- /.
+        ****** LOGIN ******
+         -->
+        <div class="login-box-body" id="login_container">
+            <p class="login-box-msg">Sign in</p>
+
+            @using (Html.BeginForm("AuthenticateUser", "Home"))
+            {
+                @*<form method="post" action="dashboard.html">*@
+                <div class="form-group has-feedback">
+                    <input type="email" placeholder="Email" class="form-control">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" placeholder="Password" class="form-control">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="checkbox icheck">
+                            <label style="float: left;">
+                                <input type="checkbox" value="1" id=""> Remember Me
+                            </label>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-xs-4">
+                        <button class="btn btn-primary btn-block btn-flat" type="submit">Sign In</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            }
+            @*</form>*@
+
+            <a class="login_link" id="forgot_password" href="#">Forgot Your Password?</a>
+            <div class="clear"></div>
+
+        </div>
+
+        <!-- /.
+        ****** FORGOT ******
+         -->
+        <div class="login-box-body" id="forgotpwd_container" style="display: none;">
+            <p class="login-box-msg">Forgot Password</p>
+
+            <form method="post" action="#">
+                <div class="form-group has-feedback">
+                    <input type="email" placeholder="Email" class="form-control">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+
+                <div class="row">
+                    <!-- /.col -->
+                    <div class="col-xs-8">
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="btn btn-primary btn-block btn-flat" type="submit">Submit</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+
+            </form>
+            <a class="login_link" id="back_login" href="#">Back to Login</a>
+            <div class="clear"></div>
+
+        </div>
+
+    </div>
+    <!-- /.login-box -->
+    <!-- ***** JS ***** -->
+    <!-- JQUERY -->
+    <script src="~/Content/assets/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        $("#forgot_password").click(function () {
+            $("#forgotpwd_container").show();
+            $("#login_container").hide();
+
+        });
+        $("#back_login").click(function () {
+            $("#login_container").show();
+            $("#forgotpwd_container").hide();
+
+        });
+    </script>
+</body>
+</html>

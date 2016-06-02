@@ -1,0 +1,72 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+body {
+    background-color: #D2D6DE;
+    color: #474747;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.clear{
+  clear: both;
+}
+.login-logo {
+    margin-bottom: 25px;
+    text-align: center;
+}
+.login-box img {
+    width: 200px;
+}
+.login-page{
+    background-color: #D2D6DE;
+}
+.login-box {
+    margin: 7% auto;
+    width: 360px;
+}
+.login-box-body {
+    background: #fff none repeat scroll 0 0;
+    border-top: 0 none;
+    color: #666;
+    padding: 20px;
+}
+.login-box-body .form-control-feedback{
+    color: #777;
+}
+.login-box-msg {
+    font-size: 26px;
+    margin: 0;
+    padding: 0 20px 20px;
+    text-align: center;
+}
+.form-control {
+    border-color: #d2d6de;
+    border-radius: 0;
+    box-shadow: none;
+}
+.btn.btn-flat {
+    border-radius: 0;
+    border-width: 1px;
+    box-shadow: none;
+}
+#submit {
+  background: #E86C8D;
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+}
+  
+#submit:hover {
+  background: #d45d7d;
+}
+
+.login_link{
+  float: left;
+  text-align: left;
+  display: block;
+}
