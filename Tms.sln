@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.Web", "Tms.Web\Tms.Web.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.Common.Logging", "Tms.Common.Logging\Tms.Common.Logging.csproj", "{7AD6B789-0F56-4095-8313-3597F0B215AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.API", "Tms.API\Tms.API.csproj", "{6246BB02-0684-4B6B-AAD6-19F96A316AEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7AD6B789-0F56-4095-8313-3597F0B215AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AD6B789-0F56-4095-8313-3597F0B215AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AD6B789-0F56-4095-8313-3597F0B215AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6246BB02-0684-4B6B-AAD6-19F96A316AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6246BB02-0684-4B6B-AAD6-19F96A316AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6246BB02-0684-4B6B-AAD6-19F96A316AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6246BB02-0684-4B6B-AAD6-19F96A316AEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
