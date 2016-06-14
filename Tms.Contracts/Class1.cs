@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tms.DataAccess
+namespace Tms.Contracts
 {
     public class Class1
     {
