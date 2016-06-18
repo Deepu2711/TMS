@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6A2ABF41-5024-4546-A382-D7984C79DA8B}</ProjectGuid>
+    <ProjectGuid>{1C479850-AAE3-4B7A-B042-93486D2CD95D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -237,6 +237,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -293,9 +294,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -323,6 +322,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Tms.Business\Tms.Business.csproj">
+      <Project>{47d0b69c-2051-4236-886f-7b02666be9b1}</Project>
+      <Name>Tms.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tms.DataAccess\Tms.DataAccess.csproj">
       <Project>{1026269b-b5f2-413d-8b14-b3175666917f}</Project>
       <Name>Tms.DataAccess</Name>
@@ -330,6 +333,10 @@
     <ProjectReference Include="..\Tms.DbContext\Tms.DbContext.csproj">
       <Project>{e58cc889-322d-49f9-b48c-e20faea7092b}</Project>
       <Name>Tms.DbContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tms.Entities\Tms.Entities.csproj">
+      <Project>{34a8d51e-3c84-4cfa-ad00-16fafefabbe2}</Project>
+      <Name>Tms.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -348,7 +355,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>20712</DevelopmentServerPort>
+          <DevelopmentServerPort>2219</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:20712/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

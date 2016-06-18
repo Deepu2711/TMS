@@ -10,7 +10,7 @@ namespace Tms.RepositoryContracts
     /// <summary>
     /// This is the specific contract for Role repository.  
     /// </summary>
-    public interface IRoleRepository: IRepository<User>
+    public interface IRoleRepository: IRepository<Role>
     {
 
     }

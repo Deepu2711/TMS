@@ -23,17 +23,17 @@ namespace ASZ.Tms.DataAccess
             this.dbContext = dbContext;
         }
 
-        public void Add(User Entity)
+        public void Add(Role Entity)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<User> Find(Expression<Func<User, bool>> predicate)
+        public IEnumerable<Role> Find(Expression<Func<Role, bool>> predicate)
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(User Entity)
+        public void Remove(Role Entity)
         {
             throw new NotImplementedException();
         }
@@ -42,9 +42,9 @@ namespace ASZ.Tms.DataAccess
         /// This returns a list of all the Roles in the database. 
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<User> FindAll()
+        public IEnumerable<Role> FindAll()
         {
-            return this.dbContext.DbConnection.Query<User>("SELECT RoleID, RoleName FROM UM_Role");
+            return this.dbContext.DbConnection.Query<Role>("SELECT RoleID, RoleName FROM UM_Role");
         }
     }
 }
