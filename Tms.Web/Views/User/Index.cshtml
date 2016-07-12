@@ -1,0 +1,109 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="content" class="col-md-12 content_grey">
+    <div id="right_content" class="row">
+
+        <div class="box-typical-header">
+            <div class="cell_title">
+                <h3>Users</h3>
+            </div>
+            <div class="cell_actions">
+                <a class="action_btn" id="" href="@Url.Action("AddUser", "Users")">
+                    <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add
+                </a>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="col-md-12">
+            <div class="table-responsive box_section border_blue">
+                <table id="users_datatable" class="table table-striped display">
+                    <thead>
+                        <tr>
+                            <th>User Id</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Mobile Number</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Asz1</td>
+                            <td>Chand</td>
+                            <td>Basha</td>
+                            <td>Chand@gmail.com</td>
+                            <td>0705201609</td>
+                            <td>Inactive</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Asz2</td>
+                            <td>Aasim</td>
+                            <td>Khan</td>
+                            <td>Aasim@gmail.com</td>
+                            <td>0705201609</td>
+                            <td>Active</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Asz3</td>
+                            <td>Abdul</td>
+                            <td>Basha</td>
+                            <td>Abdul@gmail.com</td>
+                            <td>0705201609</td>
+                            <td>Active</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Asz4</td>
+                            <td>Venkat</td>
+                            <td>Krishna</td>
+                            <td>Venkat@gmail.com</td>
+                            <td>0705201609</td>
+                            <td>Inactive</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Asz5</td>
+                            <td>Sai</td>
+                            <td>Krishna</td>
+                            <td>Sai@gmail.com</td>
+                            <td>0705201609</td>
+                            <td>Active</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+<script>
+
+    /* *****  Datatable ***** */
+    $('#users_datatable').DataTable();
+
+</script>

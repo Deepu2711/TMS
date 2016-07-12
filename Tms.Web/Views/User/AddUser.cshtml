@@ -1,0 +1,464 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="content" class="col-md-12 content_grey">
+    <div class="col-md-12 content_grey" id="">
+        <div class="clear"></div>
+        <!-- TITLE-->
+        <div class="box-typical-header">
+            <div class="cell_title">
+                <h3>Manage Users</h3>
+            </div>
+            <div class="cell_actions">
+                <a class="action_btn green" id="" style="border-right: 1px solid #dcdcdc;padding-right: 10px;" href="#">
+                    <i aria-hidden="true" class="fa fa-save"></i>&nbsp;&nbsp;Save
+                </a>
+                <a class="action_btn red" id="right_close" href="@Url.Action("UsersList", "Users")">
+                    <i class="fa fa-close" aria-hidden="true"></i>&nbsp;&nbsp;Close
+                </a>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- ALERTS -->
+        <div class="col-md-12">
+            <div class="alert alert-success" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Success!</strong> This is a message.
+            </div>
+            <div class="alert alert-warning" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Warning!</strong> This is a message.
+            </div>
+            <div class="alert alert-danger" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Error!</strong> This is a message.
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- FORM -->
+
+        <div class="col-md-12 form_tabs">
+            <!-- Tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#basic_info">Manage User</a></li>
+                <li class=""><a data-toggle="tab" href="#role_access">Role & Permissions</a></li>
+                <li class=""><a data-toggle="tab" href="#data_res">Data Restrictions</a></li>
+            </ul>
+            <div class="tab-content">
+                <!-- Tab 1 -->
+                <div role="tabpanel" id="basic_info" class="box_section tab-pane active">
+                    <div class="">
+                        <h2 class="box_title">User Details</h2>
+                        <div class="form-group col-md-4">
+                            <div class="image_upload">
+                                <div class="bg_browse">
+                                    <label class="upload_btn">
+                                        <input type="file" id="fileupload" class="validate[required,checkFileType[jpg|jpeg|gif|JPG|png|PNG]]" name="fileupload" onchange="bg_firstimage(this)">
+                                    </label>
+                                </div>
+                                <div>
+                                    <img src="~/Content/assets/img/avatar-placeholder.png" id="bg_img_firstpreview" alt="Your Image here" class="form_img_block img-circle">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                            <label class="control-label">User Id</label>
+                            <input type="text" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                            <label class="control-label">Email</label>
+                            <input type="email" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                            <label class="control-label">First Name</label>
+                            <input type="text" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                            <label class="control-label">Last Name</label>
+                            <input type="text" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                            <label class="control-label">Mobile No</label>
+                            <input type="text" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                            <label class="control-label">Department</label>
+                            <input type="text" id="" class="form-control" value="">
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                            <label class="control-label">User Type</label>
+                            <select class="form-control select_single" tabindex="1" id="">
+                                <option selected value="0">-Select-</option>
+                                <option value="1">Normal</option>
+                                <option value="2">Remote</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                            <label class="control-label">Culture</label>
+                            <select class="form-control select_single" id="">
+                                <option selected value="0">-Select-</option>
+                                <option value="1">Culture 1</option>
+                                <option value="2">Culture 2</option>
+                                <option value="3">Culture 3</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                            <label class="control-label">Password</label>
+                            <input type="password" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                            <label class="control-label">Retype Password</label>
+                            <input type="password" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                            <label class="control-label">Employee Id</label>
+                            <select class="form-control select_single" id="">
+                                <option selected value="0">-Select-</option>
+                                <option value="1">Asz120</option>
+                                <option value="2">Asz122</option>
+                                <option value="3">Asz126</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                            <label class="control-label">Expiry Date</label>
+                            <input type="text" id="" class="form-control date_picker" value="">
+                        </div>
+                        <div class="col-sm-4 col-md-4 form_field">
+                            <label class="control-label">Status</label>
+                            <select class="form-control" id="">
+                                <option selected value="0">-Select-</option>
+                                <option value="1">Active</option>
+                                <option value="2">In Active</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!-- Tab 2 -->
+                <div role="tabpanel" id="role_access" class="box_section tab-pane">
+                    <div class="col-md-8 col-sm-8">
+                        <h2 class="box_title">Role Access<a href="javascript:void(0)" class="add_row" id="add_roleaccess"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;</a></h2>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <div class="table-responsive table_big">
+                                <table class="table table-bordered" id="table_roleaccess">
+                                    <thead>
+                                        <tr>
+                                            <th>Role Id</th>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <select class="form-control select_single">
+                                                    <option value="1">Select</option>
+                                                    <option value="2">121</option>
+                                                    <option value="3">122</option>
+                                                    <option value="3">123</option>
+                                                </select>
+                                            </td>
+                                            <td>Role Name</td>
+                                            <td>Description</td>
+                                            <td>
+                                                <i class="fa fa-save save_row"></i>
+                                                <i class="fa fa-edit edit_row" style="display:none;"></i>
+                                                <i class="fa fa-trash"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <h2 class="box_title">Permissions</h2>
+                        <div class="clear"></div>
+                        <div id="treeview"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!-- Tab 3 -->
+                <div role="tabpanel" id="data_res" class="box_section tab-pane">
+                    <h2 class="box_title">Data Restrictions<a href="javascript:void(0)" class="add_row" id="add_datarestricion"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;</a></h2>
+                    <div class="col-sm-12 col-md-12 form-group">
+                        <div class="table-responsive table_big">
+                            <table class="table table-bordered" id="table_datarestricion">
+                                <thead>
+                                    <tr>
+                                        <th>Resource Type</th>
+                                        <th>Type & Code</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select_single">
+                                                <option value="1">Select</option>
+                                                <option value="2">WareHouse</option>
+                                                <option value="3">Customer</option>
+                                                <option value="3">Parent Company</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="form-control select_single">
+                                                <option value="1">Select</option>
+                                                <option value="2">Conventional - W001</option>
+                                                <option value="3">Conventional - W002</option>
+                                                <option value="3">Conventional - W003</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-save save_row"></i>
+                                            <i class="fa fa-edit edit_row" style="display:none;"></i>
+                                            <i class="fa fa-trash"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+<script>
+
+    $('#main-content').addClass('margin-left-50')
+    $('#sidebar').addClass('mini-menu');
+
+</script>
+<script src="~/Content/assets/js/kendo.all.min.js"></script>
+<script>
+    $("#treeview").kendoTreeView({
+        checkboxes: {
+            checkChildren: true
+        },
+
+        check: onCheck,
+
+        dataSource: [{
+            id: 1, text: "Resource Management", expanded: false, spriteCssClass: "folder", items: [
+            {
+                id: 2, text: "Manpower", expanded: false, spriteCssClass: "html", items: [
+                { id: 3, text: "Update", spriteCssClass: "image" },
+                { id: 4, text: "Delete", spriteCssClass: "image" },
+                { id: 5, text: "Insert", spriteCssClass: "image" },
+                { id: 6, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 7, text: "Vehicles", expanded: false, spriteCssClass: "html", items: [
+                { id: 8, text: "Update", spriteCssClass: "image" },
+                { id: 9, text: "Delete", spriteCssClass: "image" },
+                { id: 10, text: "Insert", spriteCssClass: "image" },
+                { id: 11, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 12, text: "Equipments", expanded: false, spriteCssClass: "html", items: [
+                { id: 13, text: "Update", spriteCssClass: "image" },
+                { id: 14, text: "Delete", spriteCssClass: "image" },
+                { id: 15, text: "Insert", spriteCssClass: "image" },
+                { id: 16, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Warehouse", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Vehicle Logger", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Resource Unavailability", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Shift Types", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Zones", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            }
+            ]
+        }, {
+            id: 1, text: "Contacts", expanded: true, spriteCssClass: "folder", items: [
+            {
+                id: 2, text: "Manage Customers", expanded: false, spriteCssClass: "html", items: [
+                { id: 3, text: "Update", spriteCssClass: "image" },
+                { id: 4, text: "Delete", spriteCssClass: "image" },
+                { id: 5, text: "Insert", spriteCssClass: "image" },
+                { id: 6, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Manage Contractors", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            }
+            ]
+        }, {
+            id: 1, text: "Scheduling", expanded: true, spriteCssClass: "folder", items: [
+            {
+                id: 2, text: "Route Planning", expanded: false, spriteCssClass: "html", items: [
+                { id: 3, text: "Update", spriteCssClass: "image" },
+                { id: 4, text: "Delete", spriteCssClass: "image" },
+                { id: 5, text: "Insert", spriteCssClass: "image" },
+                { id: 6, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Master Schedule", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            }
+            ]
+        }]
+    });
+
+    // function that gathers IDs of checked nodes
+    function checkedNodeIds(nodes, checkedNodes) {
+        for (var i = 0; i < nodes.length; i++) {
+            if (nodes[i].checked) {
+                checkedNodes.push(nodes[i].id);
+            }
+
+            if (nodes[i].hasChildren) {
+                checkedNodeIds(nodes[i].children.view(), checkedNodes);
+            }
+        }
+    }
+
+    // show checked node IDs on datasource change
+    function onCheck() {
+        var checkedNodes = [],
+        treeView = $("#treeview").data("kendoTreeView"),
+        message;
+
+        checkedNodeIds(treeView.dataSource.view(), checkedNodes);
+
+        if (checkedNodes.length > 0) {
+            message = "IDs of checked nodes: " + checkedNodes.join(",");
+        } else {
+            message = "No nodes checked.";
+        }
+
+        $("#result").html(message);
+    }
+</script>
+<script type="text/javascript">
+    // Role Access
+    $(document).on('click', '#add_roleaccess', function () {
+        var clonedrow = $('#table_roleaccess tbody tr:first').clone();
+        clonedrow.find('select').val('1').removeClass("remove_control");;;
+        clonedrow.find('.fa-save').show();
+        clonedrow.find('.fa-edit').hide();
+        $('#table_roleaccess tbody').append(clonedrow);
+    });
+
+    //Data Restriction
+    $(document).on('click', '#add_datarestricion', function () {
+        var clonedrow = $('#table_datarestricion tbody tr:first').clone();
+        clonedrow.find('select').val('1').removeClass("remove_control");;;
+        clonedrow.find('.fa-save').show();
+        clonedrow.find('.fa-edit').hide();
+        $('#table_datarestricion tbody').append(clonedrow);
+    });
+
+    // Save Row
+    $(document).on('click', '.save_row', function () {
+        var row = $(this).parent().parent();
+
+        row.find('.fa-edit').show();
+        row.find('.fa-save').hide();
+        row.find('input,select').addClass("remove_control");
+    });
+
+    // Edit Row
+    $(document).on('click', '.edit_row', function () {
+        var row = $(this).parent().parent();
+
+        row.find('.fa-edit').hide();
+        row.find('.fa-save').show();
+        row.find('input,select').removeClass("remove_control");
+    });
+
+</script>
+<style>
+    #treeview .k-sprite {
+        background-image: url("../Content/assets/img/coloricons-sprite.png");
+    }
+
+    .rootfolder {
+        background-position: 0 0;
+    }
+
+    .folder {
+        background-position: 0 -16px;
+    }
+
+    .pdf {
+        background-position: 0 -32px;
+    }
+
+    .html {
+        background-position: 0 -48px;
+    }
+
+    .image {
+        background-position: 0 -64px;
+    }
+
+    ul.k-group.k-treeview-lines > li.k-item {
+        border-bottom: 1px solid #dcdcdc;
+        margin: 1px 0px;
+    }
+</style>
+
+

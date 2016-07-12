@@ -136,7 +136,9 @@
     <Compile Include="Controllers\ReceivingController.cs" />
     <Compile Include="Controllers\ReleasingController.cs" />
     <Compile Include="Controllers\ResourceAvailablityController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\RoutePlanningController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\VehicleController.cs" />
     <Compile Include="Controllers\VehicleLoggerController.cs" />
     <Compile Include="Controllers\VehicleStatusController.cs" />
@@ -146,6 +148,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\WebAPIHelper.cs" />
     <Compile Include="Models\Error.cs" />
     <Compile Include="Models\LoggingCategories.cs" />
     <Compile Include="Models\LoginCredentials.cs" />
@@ -318,11 +321,20 @@
     <Content Include="Views\AddUsers\AddUsersList.cshtml" />
     <Content Include="Views\Permissions\PermissionsList.cshtml" />
     <Content Include="Views\ManageRoles\ManageRolesPage.cshtml" />
+    <Content Include="Views\Role\ManageRole.cshtml" />
+    <Content Include="Views\User\AddUser.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Role\RolePermissionAddPage.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tms.Business\Tms.Business.csproj">
       <Project>{47d0b69c-2051-4236-886f-7b02666be9b1}</Project>
       <Name>Tms.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tms.Entities\Tms.Entities.csproj">
+      <Project>{34a8d51e-3c84-4cfa-ad00-16fafefabbe2}</Project>
+      <Name>Tms.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Tms.Model\Tms.Model.csproj">
       <Project>{9515c84d-84bd-475c-a8aa-769b72ff69cb}</Project>

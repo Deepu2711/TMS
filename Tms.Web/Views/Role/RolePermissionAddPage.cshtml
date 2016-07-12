@@ -1,0 +1,246 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="content" class="col-md-12 content_grey">
+    <div class="col-md-12 content_grey">
+        <div class="clear"></div>
+        <div class="box-typical-header">
+            <div class="cell_title">
+                <h3>Roles & Permissions</h3>
+            </div>
+            <div class="cell_actions">
+                <a class="action_btn green" id="" style="border-right: 1px solid #dcdcdc;padding-right: 10px;" href="#">
+                    <i aria-hidden="true" class="fa fa-save"></i>&nbsp;&nbsp;Save
+                </a>
+                <a class="action_btn red" id="" href="@Url.Action("RolePermissionList", "Roleandpermission")">
+                    <i class="fa fa-close" aria-hidden="true"></i>&nbsp;&nbsp;Close
+                </a>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="col-md-12 form_tabs">
+            <!-- Tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#role_access">Basic Information</a></li>
+            </ul>
+            <div class="tab-content">
+                <!-- Tab 1 -->
+                <div role="tabpanel" id="role_access" class="box_section tab-pane active">
+                    <div class="col-md-7 col-sm-7">
+                        <h2 class="box_title">Role Access</h2>
+                        <div class="clear"></div>
+                        <div class="col-sm-6 col-md-6 form-group">
+                            <label class="control-label">Role Id</label>
+                            <input type="text" id="" class="form-control" value="" disabled="disabled">
+                        </div>
+                        <div class="col-sm-6 col-md-6 form-group">
+                            <label class="control-label">Role Name</label>
+                            <input type="text" id="" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-12 col-md-12 form-group">
+                            <label>Description</label>
+                            <textarea class="form-control" rows="2" id=""></textarea>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="col-md-5 col-sm-5">
+                        <h2 class="box_title">Permissions</h2>
+                        <div class="clear"></div>
+                        <div id="treeview"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<script>
+
+    $('#main-content').addClass('margin-left-50')
+    $('#sidebar').addClass('mini-menu');
+
+</script>
+<script src="~/Content/assets/js/kendo.all.min.js"></script>
+<script>
+    $("#treeview").kendoTreeView({
+        checkboxes: {
+            checkChildren: true
+        },
+
+        check: onCheck,
+
+        dataSource: [{
+            id: 1, text: "Resource Management", expanded: false, spriteCssClass: "folder", items: [
+            {
+                id: 2, text: "Manpower", expanded: false, spriteCssClass: "html", items: [
+                { id: 3, text: "Update", spriteCssClass: "image" },
+                { id: 4, text: "Delete", spriteCssClass: "image" },
+                { id: 5, text: "Insert", spriteCssClass: "image" },
+                { id: 6, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 7, text: "Vehicles", expanded: false, spriteCssClass: "html", items: [
+                { id: 8, text: "Update", spriteCssClass: "image" },
+                { id: 9, text: "Delete", spriteCssClass: "image" },
+                { id: 10, text: "Insert", spriteCssClass: "image" },
+                { id: 11, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 12, text: "Equipments", expanded: false, spriteCssClass: "html", items: [
+                { id: 13, text: "Update", spriteCssClass: "image" },
+                { id: 14, text: "Delete", spriteCssClass: "image" },
+                { id: 15, text: "Insert", spriteCssClass: "image" },
+                { id: 16, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Warehouse", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Vehicle Logger", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Resource Unavailability", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Shift Types", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Zones", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            }
+            ]
+        }, {
+            id: 1, text: "Contacts", expanded: true, spriteCssClass: "folder", items: [
+            {
+                id: 2, text: "Manage Customers", expanded: false, spriteCssClass: "html", items: [
+                { id: 3, text: "Update", spriteCssClass: "image" },
+                { id: 4, text: "Delete", spriteCssClass: "image" },
+                { id: 5, text: "Insert", spriteCssClass: "image" },
+                { id: 6, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Manage Contractors", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            }
+            ]
+        }, {
+            id: 1, text: "Scheduling", expanded: true, spriteCssClass: "folder", items: [
+            {
+                id: 2, text: "Route Planning", expanded: false, spriteCssClass: "html", items: [
+                { id: 3, text: "Update", spriteCssClass: "image" },
+                { id: 4, text: "Delete", spriteCssClass: "image" },
+                { id: 5, text: "Insert", spriteCssClass: "image" },
+                { id: 6, text: "View", spriteCssClass: "image" }
+                ]
+            },
+            {
+                id: 17, text: "Master Schedule", expanded: false, spriteCssClass: "html", items: [
+                { id: 18, text: "Update", spriteCssClass: "image" },
+                { id: 19, text: "Delete", spriteCssClass: "image" },
+                { id: 20, text: "Insert", spriteCssClass: "image" },
+                { id: 21, text: "View", spriteCssClass: "image" }
+                ]
+            }
+            ]
+        }]
+    });
+
+    // function that gathers IDs of checked nodes
+    function checkedNodeIds(nodes, checkedNodes) {
+        for (var i = 0; i < nodes.length; i++) {
+            if (nodes[i].checked) {
+                checkedNodes.push(nodes[i].id);
+            }
+
+            if (nodes[i].hasChildren) {
+                checkedNodeIds(nodes[i].children.view(), checkedNodes);
+            }
+        }
+    }
+
+    // show checked node IDs on datasource change
+    function onCheck() {
+        var checkedNodes = [],
+        treeView = $("#treeview").data("kendoTreeView"),
+        message;
+
+        checkedNodeIds(treeView.dataSource.view(), checkedNodes);
+
+        if (checkedNodes.length > 0) {
+            message = "IDs of checked nodes: " + checkedNodes.join(",");
+        } else {
+            message = "No nodes checked.";
+        }
+
+        $("#result").html(message);
+    }
+</script>
+<style>
+    #treeview .k-sprite {
+        background-image: url("../Content/assets/img/coloricons-sprite.png");
+    }
+
+    .rootfolder {
+        background-position: 0 0;
+    }
+
+    .folder {
+        background-position: 0 -16px;
+    }
+
+    .pdf {
+        background-position: 0 -32px;
+    }
+
+    .html {
+        background-position: 0 -48px;
+    }
+
+    .image {
+        background-position: 0 -64px;
+    }
+
+    ul.k-group.k-treeview-lines > li.k-item {
+        border-bottom: 1px solid #dcdcdc;
+        margin: 1px 0px;
+    }
+</style>

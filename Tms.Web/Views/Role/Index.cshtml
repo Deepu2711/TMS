@@ -1,0 +1,91 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="content" class="col-md-12 content_grey">
+    <div id="right_content" class="row">
+
+        <div class="box-typical-header">
+            <div class="cell_title">
+                <h3>Roles & Permissions</h3>
+            </div>
+            <div class="cell_actions">
+                <a class="action_btn" id="" href="@Url.Action("RolePermissionAddPage", "Roleandpermission")">
+                    <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add
+                </a>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="col-md-12">
+            <div class="table-responsive box_section border_blue">
+                <table id="role_datatable" class="table table-striped display">
+                    <thead>
+                        <tr>
+                            <th>Role Id</th>
+                            <th>Role Name</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Role 1</td>
+                            <td>Asz 1</td>
+                            <td>Description</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Role 2</td>
+                            <td>Asz 2</td>
+                            <td>Description</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Role 3</td>
+                            <td>Asz 3</td>
+                            <td>Description</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Role 4</td>
+                            <td>Asz 4</td>
+                            <td>Description</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Role 5</td>
+                            <td>Asz 5</td>
+                            <td>Description</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+<script>
+
+    /* *****  Datatable ***** */
+    $('#role_datatable').DataTable();
+
+</script>

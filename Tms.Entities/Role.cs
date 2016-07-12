@@ -20,5 +20,10 @@ namespace Tms.Entities
         /// This is the Role Name. 
         /// </summary>
         public string RoleName { get; set; }
+
+        /// <summary>
+        /// This is the collection of permissions for the Role. 
+        /// </summary>
+        public IEnumerable<Permission> PermissionSet { get; set; }
     }
 }

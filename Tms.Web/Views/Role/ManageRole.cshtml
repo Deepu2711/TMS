@@ -1,0 +1,92 @@
+﻿@model Tms.Entities.Role
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+    <div id="content" class="row content_grey">
+        <div id="right_content" class="row">
+            <div class="box-typical-header">
+                <div class="cell_title">
+                    <h3>Manage Roles</h3>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <div class="col-md-12 roles_div">
+                    <form class="form-inline pad-10">
+                        <div class="form-group">
+                            <label>Add Role</label>
+                            <input type="text" class="form-control" placeholder="Role Name">
+                            
+                        </div>
+                        <button type="submit" class="btn def_btn mar-l-10">Save Role</button>
+                    </form>
+                </div>
+                <div class="clear"></div>
+                <div class="table-responsive">
+                    <table id="data_table" width="100%" class="table table-striped display table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Role</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="editable_td">
+                                        Role 1
+                                    </div>
+                                </td>
+                                <td>
+                                    <small class="label btn-primary td_edit_btn">Edit Role</small>
+                                    <small class="label btn-success td_save_btn" style="display:none;">Save Role</small>
+                                    <a href="#"><small class="label btn-warning">Edit Permissions</small></a>
+                                    <small class="label btn-danger">Delete Role</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="editable_td">
+                                        Role 2
+                                    </div>
+                                </td>
+                                <td>
+                                    <small class="label btn-primary td_edit_btn">Edit Role</small>
+                                    <small class="label btn-success td_save_btn" style="display:none;">Save Role</small>
+                                    <a href="#"><small class="label btn-warning">Edit Permissions</small></a>
+                                    <small class="label btn-danger">Delete Role</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="editable_td">
+                                        Role 3
+                                    </div>
+                                </td>
+                                <td>
+                                    <small class="label btn-primary td_edit_btn">Edit Role</small>
+                                    <small class="label btn-success td_save_btn" style="display:none;">Save Role</small>
+                                    <a href="#"><small class="label btn-warning">Edit Permissions</small></a>
+                                    <small class="label btn-danger">Delete Role</small>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#data_table').dataTable();
+    });
+</script>
